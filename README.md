@@ -1,2 +1,16 @@
-# peppershades
-Peppershades is a dynamic service management system in which a user can turn his ideas into a document giving a clear view of design of whatever digital service saving the time in calls and meetups.
+ VueJS Starter Template
+
+## VueJs template
+
+>separated Code for better code readability, separate files for html, js and styles
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:9000
+npm run dev
+
+# build for production with minification
+npm run build

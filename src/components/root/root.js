@@ -5,19 +5,15 @@ import template from './root.html'
 import styles from './style.less'
 import headerElement from '../header/header'
 
-
 export default Vue.extend({
   components: {
     'headerElement': headerElement
   },
   template: template,
   data: function () {
-    return {
-    }
+    return {}
   },
-  methods: {
-
-  },
+  methods: {},
   created: function () {
   }
 });

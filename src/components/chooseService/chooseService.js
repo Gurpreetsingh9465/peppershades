@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import template from './links.html'
-import styles from './links.less'
+import template from './chooseService.html'
+import styles from './chooseService.less'
 
 export default Vue.extend({
   template: template,

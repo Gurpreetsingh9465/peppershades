@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import template from './links.html'
-import styles from './links.less'
+import template from './projectform.html'
+import styles from './projectform.less'
 
 export default Vue.extend({
   template: template,

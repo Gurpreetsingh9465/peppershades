@@ -3,14 +3,14 @@
     <div class="row">
       <div class="col-lg-3"></div>
       <div class="col-lg-6 projectForm">
-        <div class="titleline"> We care for the best results on the first go without wasting your time, the process
+        <p> We care for the best results on the first go without wasting your time, the process
           would be more easier for us if you will provide more information about your project.
-        </div>
-        <div class="skippart">SKIP THIS PART</div>
+        </p>
+        <a class="color-primary">SKIP THIS PART</a>
         <form>
           <div class="projectDetails">
 
-            Competitors
+            <p class="caption">Competitors</p>
             <div class="form-group row ">
 
               <div class="col-lg-5"><input type="text" class="form-control border-bottom border-dark" id="projectName"
@@ -53,9 +53,11 @@
           </div>
 
           <router-link to="/chooseService">
-            <button type="submit" class="btn target btn-primary"><img class="mr-1" src="images/MaskGroup48.svg">Select
-              Items
+            <div style="text-align: center;">
+            <button type="submit" class="btn target btn-primary">Select
+              Items<img class="mr-1 button-hover" src="images/MaskGroup48.svg">
             </button>
+            </div>
           </router-link>
         </form>
       </div>

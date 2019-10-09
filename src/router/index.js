@@ -7,14 +7,20 @@ import targetAudience from '../components/targetAudience/targetAudience'
 import ProjectForm from '../components/projectform/projectform';
 import marketBusiness from '../components/marketbusiness/marketbusiness';
 import chooseService from '../components/chooseService/chooseService';
+import homepage from '../components/homepage/homepage'
 
 Vue.use(Router);
 export default new Router({
   routes: [
-        {
+        /*{
           path: '',
           name: 'ProjectForm',
           component: ProjectForm
+        },*/
+        {
+          path: '',
+          name: 'homepage',
+          component: homepage
         },
         {
           path: '/targetAudience',

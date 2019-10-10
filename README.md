@@ -8,7 +8,6 @@
 ``` bash
 # install dependencies
 npm install
-npm install --save express body-parser cors mongoose nodemon //backend dependencies
 
 # serve with hot reload at localhost:9000
 npm run dev

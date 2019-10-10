@@ -12,11 +12,11 @@ import homepage from '../components/homepage/homepage'
 Vue.use(Router);
 export default new Router({
   routes: [
-        /*{
+        /* {
           path: '',
           name: 'ProjectForm',
           component: ProjectForm
-        },*/
+        }, */
         {
           path: '',
           name: 'homepage',

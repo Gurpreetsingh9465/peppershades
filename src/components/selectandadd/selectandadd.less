@@ -1,0 +1,79 @@
+@import "../../assets/common.less";
+.heading{
+    height: 224px;
+    background-color: black;
+}
+.inside-row{
+    height:96px;
+    background-color: yellow;
+    
+}
+
+.main-title{
+    background-color:red;
+ height:100%;
+}
+.back-arrow{
+    background-color: green;
+    height: 100%;
+    width: 96px;
+}
+.heading-text{
+    background-color: darksalmon;
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+    
+}
+.display{
+    display: flex;
+    flex-direction: row;
+
+}
+.dd{
+    background-color: antiquewhite;
+    width: 83.33%;
+
+    
+}
+.active-item{
+    border: 1px solid @theme-color ;
+}
+
+
+.options{
+    height: 128px;
+}
+.active{
+    border-bottom:1px solid @theme-color ;
+}
+.item{
+    margin: 0px 16px 0px 16px;
+}
+.item img{
+    width: 48px;
+    height: 48px;
+}
+.item{
+    padding: 32px;
+  
+
+}
+
+.item p{
+    opacity: 70%;
+    
+
+
+}
+.non-active:hover{
+    cursor: pointer;
+    border: 1px solid black;
+    transition: 0.8s;
+}
+.non-active{
+    border: 1px solid transparent;
+}
+.active-item:hover{
+    cursor: pointer;
+}

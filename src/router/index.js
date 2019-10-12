@@ -10,6 +10,7 @@ import chooseService from '../components/chooseService/chooseService';
 import homepage from '../components/homepage/homepage'
 import selectandadd from '../components/selectandadd/selectandadd'
 import designview from '../components/designview/designview'
+import login from '../components/login/login'
 
 Vue.use(Router);
 export default new Router({
@@ -35,14 +36,19 @@ export default new Router({
           component: marketBusiness
         },
         {
-          path:'/selectandadd',
+          path: '/selectandadd',
           name: 'selectandadd',
-          component:selectandadd
+          component: selectandadd
         },
         {
-          path:'/designview',
-          name:'designview',
-          component:designview
+          path: '/designview',
+          name: 'designview',
+          component: designview
+        },
+        {
+          path: '/login',
+          name: 'login',
+          component: login
         },
         {
           path: '/chooseService',

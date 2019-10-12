@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-lg-8"></div>
     <!-- chatbox section starts-->
-<div class="col-lg-4">
+<div class="col-lg-4 chat-col">
 <div class="chat-title">
   
     <div class="chat-pic">
@@ -11,27 +11,21 @@
     <h6 class="title-text"></h6>
 </div>
 <div class="chat-body">
-    <div class="msg-container">  <div class="receiver">
+    <div class="msg-container" v-for="message in messages">
+        <div :class="[message.author===authUser.displayName?'alignright':'normal']">
+      <div :class="[message.author===authUser.displayName?'sender':'receiver']">
         <p class="body1">
-kfjdgjfgljdfsgj
+    {{message.message}}
         </p>
     </div>
+</div>
 </div> 
-<div class="msg-container msg-sender">
-    <div class="alignright">
-    <div class="sender">
-            <p class="body1">
-                tque mollitia animi quasi reprehenderit, labo
-                
-            </p>
-    </div>
-</div>
-</div>
+
 </div>
 <div class="chat-input ">
     <div class="chat-textbox border-bottom">
         <div class="chattext">
-            <input type="text" placeholder="type a message">
+            <input @keyup.enter="saveMessage"  v-model="message" type="text" class="write_msg" placeholder="Type a message" />
 
         </div>
         <div class="attachbutton center">

@@ -1,10 +1,18 @@
 @import "../../assets/common.less";
+
+
 .chat-title{
     height: 96px;
     width: 100%;
     display: flex;
     padding: 16px;
+   
+   
 
+}
+.chat-body{
+    height: 516px;
+    overflow-y: auto;
 }
 .chat-pic{
     padding: 8px;
@@ -20,16 +28,16 @@
 }
 .chat-body{
     padding: 32px;
-    
+    display: block;
+    overflow-x: hidden;
 }
+
 .sender,.receiver{
     border:1px solid  transparent;
     border-radius: 8px 8px 0px 8px;
     background-color:   #4d4d4d;
-    color: white;
-    min-width: 48px;
-    min-height: 48px;
   
+    color: white;
     width: fit-content;
     margin:16px 0px 16px 0px;
     padding: 16px;
@@ -37,13 +45,24 @@
 }
 .receiver{
     float: left;
+    margin-right: auto;
+    min-width: 96px;
+max-width: 70%;
     background-color: #f26067  !important;
+    word-wrap: break-word;
+    word-break:break-all;
+    
     
 }
 .sender{
  
   float:right;
-  max-width: 70%;
+min-width: 96px;
+max-width: 70%;
+word-break:break-all;
+ 
+  word-wrap: break-word;
+
 
 }
 .msg-container{
@@ -51,14 +70,14 @@
     display: flex;
     width: 100%;
     flex-direction: row;
+    overflow-x: unset;
 }
 .alignright{
-    display: inline-block;
+
+    margin-left: auto;
     
 }
-button{
 
-}
 .chat-input{
     display:flex;
     

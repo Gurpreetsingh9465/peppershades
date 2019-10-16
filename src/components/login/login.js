@@ -11,7 +11,7 @@ export default Vue.extend({
       return {}
     },
     methods: {
-        login() {
+        loginwithgoogle() {
             var provider = new firebase.auth.GoogleAuthProvider();
        provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
       firebase.auth().signInWithPopup(provider).then(result=> {

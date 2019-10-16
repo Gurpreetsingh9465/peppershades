@@ -11,6 +11,7 @@ import homepage from '../components/homepage/homepage'
 import selectandadd from '../components/selectandadd/selectandadd'
 import designview from '../components/designview/designview'
 import login from '../components/login/login'
+import dashboard from '../components/dashboard/dashboard'
 
 Vue.use(Router);
 export default new Router({
@@ -24,6 +25,11 @@ export default new Router({
           path: '',
           name: 'homepage',
           component: homepage
+        },
+        {
+          path:'/dashboard',
+          name: 'dashboard',
+          component: dashboard
         },
         {
           path: '/targetAudience',

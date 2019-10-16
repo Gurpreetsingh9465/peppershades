@@ -3,6 +3,8 @@ import template from './designview.html'
 import styles from './designview.less'
 import firebase from 'firebase'
 
+/* eslint-disable */
+
 export default Vue.extend({
   template: template,
   data(){

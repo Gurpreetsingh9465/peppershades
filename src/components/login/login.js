@@ -3,13 +3,15 @@ import template from './login.html'
 import styles from './login.less'
 import firebase from 'firebase'
 
+/* eslint-disable */
+
 export default Vue.extend({
     template: template,
     data: function () {
       return {}
     },
-    methods:{
-        login(){
+    methods: {
+        loginwithgoogle() {
             var provider = new firebase.auth.GoogleAuthProvider();
        provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
       firebase.auth().signInWithPopup(provider).then(result=> {

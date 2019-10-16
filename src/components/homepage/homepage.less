@@ -80,10 +80,12 @@ height: 16vh;
  width: 50%; 
  position: absolute;;
  max-height: 560px;
-
+ 
 
 }
 .cover{
+ 
+ 
  top:50%;
  margin-left: 50%;
  margin-top: -96px;
@@ -98,6 +100,23 @@ height: 16vh;
   border: none;
   padding: 32px;
 }
+.card-body{
+  padding: 0px;
+}
+.package:hover{
+  cursor: pointer;
+  border: 1px solid black;
+  transition: 0.8s;
+}
+.package{
+  border: 1px solid transparent;
+  
+}
+.package button{
+  background: white;
+  border: none;
+  text-align: left;
+}
 .mt-16{
   margin-top: 16px;
 
@@ -110,7 +129,24 @@ height: 16vh;
   width: 70%;
 }
 .package-go{
-margin-top:32px ;
-  width: 30%;
-  margin-left: 32px;
+ margin-top:32px ;
+ width: 30%;
+ margin-left: 32px;
+ justify-content: right !important;
+ text-align: right !important;
 }
+@media only screen and (min-width: 1680px) {
+  .bottom-card{
+    width: 75%;
+  }
+  
+}
+@media only screen and (max-width: 1140px) {
+  .cover{
+    display: none;
+    height: 100px;;
+  }
+  
+  
+}
+

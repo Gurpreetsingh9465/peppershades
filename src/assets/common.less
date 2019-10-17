@@ -32,12 +32,27 @@ h6{
 
 .body1{
 	font-size: 16px;
+	font-family: Regular;
+}
+.body2{
+	font-size: 14px;
+	font-family: Regular;
 }
 
 button{
 border-radius: 0% !important;
 }
+.action-link{
+	position: absolute;
+	bottom: 24px;
+	right: 48px;
+	font-weight: 600;
+	
 
+}
+.action-link:hover{
+	cursor: pointer;
+}
 
 
 .active-line{
@@ -158,10 +173,12 @@ vertical-align: middle !important;
 justify-content: center !important;
 }
 
-.next-button{
+.button-controls{
 	padding: 16px;
+	display: flex;
+	justify-content: center;
 }
-.next{
+.btn-solid{
 	width: auto;
 	border: none;
 	padding:16px 32px;
@@ -169,6 +186,17 @@ justify-content: center !important;
 	font-family: SemiBold;
 	font-size: 18px;
 	color: white;
+	margin: 0px 16px;
+}
+.btn-outline{
+	width: auto;
+	border: 1px solid @theme-color;
+	padding:16px 32px;
+	background-color: transparent;
+	font-family: SemiBold;
+	font-size: 18px;
+	color: @theme-color;
+	margin: 0px 16px;
 }
 .mt-32{
 	margin-top: 32px;
@@ -176,46 +204,6 @@ justify-content: center !important;
 .mt-64{
 	margin-top: 64px;
 }
-
-
-
-// Project Initialize
-
-.heading{
-    height: 224px;
-    
-}
-.inside-row{
-    height:96px;
-    margin-left: -96px;    
-}
-
-.main-title{    
- height:100%;
-}
-.back-arrow{    
-    height: 100%;
-    width: 96px;
-}
-.heading-text{    
-    height: 100%;
-    width: 100%;
-    padding: 16px;    
-}
-.display{
-    display: flex;
-    flex-direction: row;
-}
-
-.dd{    
-    width: 83.33%;   
-}
-.options{
-    height: 128px;
-}
-
-
-
 
 .action{
 

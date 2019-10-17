@@ -9,5 +9,10 @@ export default Vue.extend({
   },
   methods: {},
   created: function () {
+    
+    
   }
 });
+
+
+

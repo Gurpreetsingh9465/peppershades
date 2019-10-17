@@ -1,6 +1,6 @@
 
 
-<div class="project-form" >
+<div class="projectform" >
     <div class="heading row justify-content-md-center center">
             
            <div class="inside-row align-self-center">
@@ -36,73 +36,86 @@
             </div>
         </div>
     </div>
-    <div class="row item-container mt-16">
-    <div class="col-lg-10 offset-lg-1 center">
     <div class="row">
+    <div class="pro-form col-lg-6 offset-lg-3">
+    
+      
+        <form>
             
-        <div class="col-lg-6 projectForm">
+        <div class="row">
 
-            <form>
-              <div class="projectDetails">
-                <div class="form-group">
-    
-                  <input type="text" class="form-control border-bottom border-dark" id="projectName"
-                         aria-describedby="emailHelp" placeholder="Project Name">
+                <!-- Single Line Box -->
+                <div class="text-box col-lg-8 mt-32 ">  
+                    <div class="require true" ><img src="./static/assets/images/MaskGroup52.svg"></div>                  
+                    <input type="text" id="projectName" aria-describedby="emailHelp" placeholder="Name">
                 </div>
-                <div class="form-group">
-                  <img class="arrow" src="./static/assets/images/MaskGroup52.svg" style="width:16px; height:16px">
-                  <input type="text" class="form-control border-bottom border-dark" id="projectDesc"
-                         aria-describedby="emailHelp" placeholder="Project Description">
+                
+                
+                
+                <!-- Dropdowns -->
+                <div class="text-box col-lg-4 mt-32 ">
+                  
+                <input type="text" placeholder="Type" list="projecttypes"/>
+                        <datalist style="background-color: white; color:black;" id="projecttypes">
+                            <option>Corporate</option>
+                            <option>Start-Up</option>
+                            <option>Event</option>
+                        </datalist> 
+                        
                 </div>
-    
-                <div class="form-group">
-    
-    
-                  <img class="arrow" src="./static/assets/images/MaskGroup48.svg" style="width:16px; height:16px">
-                  <input type="text" class="form-control border-bottom border-dark" id="industry"
-    
-                         aria-describedby="emailHelp" placeholder="Industry">
-    
+
+                <!-- Multiline Box -->
+                <div class="text-box col-lg-12 mt-32 ">
+                    <div class="require true" ><img src="./static/assets/images/MaskGroup52.svg"></div>
+                    
+                    <textarea type="text" rows="2" cols="100" id="projectDesc" aria-describedby="emailHelp" placeholder="Description"></textarea>
                 </div>
-                <div class="form-group">
-    
-                  <input type="text" class="form-control border-bottom border-dark" id="tagline"
-                         aria-describedby="emailHelp" placeholder="Tagline(If Any)">
+
+                <!-- Dropdowns -->
+                <div class="text-box col-lg-5 mt-32 ">
+                    <div class="require true" ><img src="./static/assets/images/MaskGroup52.svg"></div>                  
+                    <input type="text" placeholder="Year of Foundation" list="years"/>
+                            <datalist style="background-color: white; color:black;" id="years">
+                                <option>1990</option>
+                                <option>1991</option>
+                                <option>1992</option>
+                            </datalist>                             
+                    </div>
+
+                <!-- Multiline Box -->
+                <div class="text-box col-lg-7 mt-32 ">
+                    <div class="require true" ><img src="./static/assets/images/MaskGroup52.svg"></div>                    
+                    <textarea type="text" rows="2" cols="100" id="projectDesc" aria-describedby="emailHelp" placeholder="share your business story?"></textarea>
+
                 </div>
-                <div class="form-group">
-    
-                  <input type="text" class="form-control border-bottom border-dark" id="foundation"
-                         aria-describedby="emailHelp" placeholder="What was the founding story?">
+
+                <!-- Multiline Box -->
+                <div class="text-box col-lg-12 mt-32 ">
+                    <div class="require true" ><img src="./static/assets/images/MaskGroup52.svg"></div>                    
+                    <textarea type="text" rows="2" cols="100" id="projectDesc" aria-describedby="emailHelp" placeholder="What values you provide through your business?"></textarea>
+                    <a class="body1 action-link"> LEARN MORE</a>
                 </div>
-                <div class="form-group">
-                  <img class="arrow" src="./static/assets/Mask%20Group%2051.svg" style="width:16px; height:16px">
-                  <input type="text" class="form-control border-bottom border-dark" id="start_date"
-    
-                         aria-describedby="emailHelp" placeholder="Founded On?">
-                </div>
-                <div class="form-group">
-    
-                  <input type="text" class="form-control border-bottom border-dark" id="value"
-                         aria-describedby="emailHelp" placeholder="Value Propositions">
-                </div>
-              </div>
-    <div class="form-group row">
-      <div class="col-3 col-lg-3" ></div>
-              <router-link to="/targetAudience">
-                <button type="submit" class="next"> Target
-                  Audience <img class="mr-1 button-hover" src="./static/assets/images/MaskGroup48.svg">
-                </button>
-    
-              </router-link>
-            </div>
-            </form>
+
+                <h6 class="col-lg-12 mt-64 text-left">Important Links</h6>
+
+                <div></div>
+
+
+
+                
+
+        </div>
+
+           
           </div>  
             
            
-    </div>
-<div class="next-button text-center">
-       <div><button class="next"> Next </button></div> 
-</div>
+        </div>
+        <div class="next-button text-center mt-64">
+              <div><button class="next"> Next </button></div> 
+        </div>
+
+      </form>
 </div>
 </div>
 </div>

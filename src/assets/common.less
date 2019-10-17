@@ -29,25 +29,17 @@ h6{
 	font-family: SemiBold;
 	font-size: 20px !important;
 }
+
+.body1{
+	font-size: 16px;
+}
+
 button{
 border-radius: 0% !important;
 }
-.button-primary{
-background-color: #209D40 !important;
-}
-.button-secondary{
-background-color: #EBEBEB !important;
 
-}
-.button-action{
-background-color: @theme-color !important;
-}
-.projectForm{
-	margin: 32px 0px 32px 0px
-}
-.projectDetails{
-	padding: 32px 0px 32px 0px;
-}
+
+
 .active-line{
     border: 2px solid @theme-color;
     width: 48px;
@@ -62,62 +54,109 @@ background-color: @theme-color !important;
 .inactive-line{
     border: 2px solid #B3B3B3;
     width: 48px;
-    height: 1px;
-    
+    height: 1px;    
 }
-.textpro {
 
-   
-    width: 347px;
-    height: 116px;
-  }
   
-  .main {
+.main {
     background-color: #EDEDED;
     padding-top: 64px;
   }
-input{
+
+.pro-form{
+	width: 100%;
+	justify-content: center;
+	padding:32px;
+	text-align: center;
+}
+
+.text-box{
+	
+	height: 64px;
+	width: 100%;
+	display: flex;
+	
+}
+
+input, textarea{
+	height: 64px;
+	
 	border: none !important;
 	border-radius: 0px !important;
 	outline: none;
 	font-size: 16px !important;
 	font-family: Regular !important;
 	font-weight: 0 !important;
-	border-bottom: 1px solid black;
+	transition: 0.6s;
+	border-bottom: 1px solid black !important;
+}
+input:focus, textarea:focus{
+	border-bottom-color:@theme-color !important;
+	
 }
 
-.form-group{
-	padding: 16px 0px 16px 0px !important; 
+textarea{
+	height: 64px;
+	overflow-y: scroll;
+	resize: none;
+	padding: 16px;
+	font-size: 18px !important;
+	font-weight: 600;
+	
+	
 }
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover
-input:focus{
-	outline: none !important; 
-color: #E4192D}
-	.target{
-		margin: 32px 0px 32px 0px;
-		background-color: #FF532D;
-		border: none;
-		border-radius: 0px;
-		width: 207px;
-		height: 48px;
 
 
+::-webkit-scrollbar {
+	width: 0px; 
+	background: transparent; 
 	}
-	.target:hover{
-		background-color: #FF532D;
-	}
-	.arrow{
+
+
+
+.require{
+	width: 64px;
+	padding: 20px;
+	height: 64px;
+	opacity: 0;
+}
+
+.true{
+	opacity: 1;
+}
+.comboBox{
+	height: 64px;
+	
+	border-radius: 0px !important;
+	outline: none;
+	padding: 0px 16px;
+	border: none !important;
+	font-size: 16px !important;
+	font-family: Regular !important;
+	font-weight: 0 !important;
+	border-bottom: 1px solid black !important;
+}
+
+option{
+	color: black;
+}
+
+
+	
+.input-icon{
+
 		position: absolute;
-		margin-top: 10px;
-		margin-left: 90%;
+		top: 24px;
+		float: right;
+		right:32px;
 	}
+
 .center{
 display: flex !important;
 flex-direction: column !important ;
 vertical-align: middle !important;
 justify-content: center !important;
-	}
-
+}
 
 .next-button{
 	padding: 16px;
@@ -131,6 +170,12 @@ justify-content: center !important;
 	font-size: 18px;
 	color: white;
 }
+.mt-32{
+	margin-top: 32px;
+}
+.mt-64{
+	margin-top: 64px;
+}
 
 
 
@@ -142,43 +187,36 @@ justify-content: center !important;
 }
 .inside-row{
     height:96px;
-    margin-left: -96px;
-    
+    margin-left: -96px;    
 }
 
-.main-title{
-    
+.main-title{    
  height:100%;
 }
-.back-arrow{
-    
+.back-arrow{    
     height: 100%;
     width: 96px;
 }
-.heading-text{
-    
+.heading-text{    
     height: 100%;
     width: 100%;
-    padding: 16px;
-    
+    padding: 16px;    
 }
 .display{
     display: flex;
     flex-direction: row;
-
 }
-.dd{
-    
-    width: 83.33%;
 
-    
+.dd{    
+    width: 83.33%;   
 }
 .options{
     height: 128px;
 }
-.body1{
-	font-size: 16px;
-}
+
+
+
+
 .action{
 
 	padding: 24px;

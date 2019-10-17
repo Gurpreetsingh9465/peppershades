@@ -1,0 +1,20 @@
+<div>
+        
+  
+<div  v-bind:class="[{imagezoomfullscreen:fullshow},{imagezoom:normalshow }]">
+    <div class="image-zoom-container">
+        
+           
+                <img v-bind:style="{ width:imagewidth+'%'}" src="./static/assets/images/cover-image.png" alt="">
+        
+    </div>
+
+
+    
+
+</div>
+<button v-on:click="zoomin">zoomin</button>
+<button v-on:click="zoomout">zoomout</button>
+<button class="screen" v-on:click="fullshow=!fullshow , normalshow=!normalshow">fullscreen</button>
+
+</div>

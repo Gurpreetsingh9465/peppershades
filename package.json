@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "firebase": "^7.2.0",
+    "lightbox2": "^2.11.1",
+    "v-viewer": "^1.4.2",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

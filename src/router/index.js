@@ -12,6 +12,7 @@ import selectandadd from '../components/selectandadd/selectandadd'
 import designview from '../components/designview/designview'
 import login from '../components/login/login'
 import dashboard from '../components/dashboard/dashboard'
+import zoomimage from '../components/zoomimage/zoomimage'
 
 Vue.use(Router);
 export default new Router({
@@ -30,6 +31,11 @@ export default new Router({
           path:'/dashboard',
           name: 'dashboard',
           component: dashboard
+        },
+        {
+          path: '/zoomimage',
+          name:'zoomimage',
+          component:zoomimage
         },
         {
           path: '/targetAudience',

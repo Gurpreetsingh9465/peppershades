@@ -4,7 +4,7 @@ import header from '../components/header/header'
 import root from '../components/root/root'
 import links from '../components/links/links'
 import targetAudience from '../components/targetAudience/targetAudience'
-import ProjectForm from '../components/projectform/projectform';
+import projectform from '../components/projectform/projectform';
 import marketBusiness from '../components/marketbusiness/marketbusiness';
 import chooseService from '../components/chooseService/chooseService';
 import homepage from '../components/homepage/homepage'
@@ -16,11 +16,11 @@ import dashboard from '../components/dashboard/dashboard'
 Vue.use(Router);
 export default new Router({
   routes: [
-        /* {
-          path: '',
-          name: 'ProjectForm',
-          component: ProjectForm
-        }, */
+        {
+          path: '/projectform',
+          name: 'projectform',
+          component: projectform
+        },
         {
           path: '',
           name: 'homepage',

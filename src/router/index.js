@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import header from '../components/header/header'
 import root from '../components/root/root'
-
 import projectform from '../components/projectform/projectform'
 import homepage from '../components/homepage/homepage'
 import designview from '../components/designview/designview'

@@ -5,12 +5,24 @@ import styles from './projectform.less'
 export default Vue.extend({
   template: template,
   data: function () {
-    return {}
+    return {
+      chips:[],
+      chipValue:''
+
+    }
   },
-  methods: {},
+  methods: {
+    addLink(){
+      this.chips.push(this.chipValue)
+      this.chipValue=''
+    },
+    removeChip(){
+      this.chips.pop(this.chipValue)
+    }
+  },
   created: function () {
     
-    
+
   }
 });
 

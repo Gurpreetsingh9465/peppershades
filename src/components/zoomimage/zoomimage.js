@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import template from './zoomimage.html'
 import styles from './zoomimage.less'
-
+import fullscreen from 'vue-fullscreen'
+Vue.use(fullscreen)
 
 export default Vue.extend({
   template: template,
@@ -9,7 +10,8 @@ export default Vue.extend({
     return {
       imagewidth:100,
       fullshow:false,
-      normalshow:true,    
+      normalshow:true, 
+      fullscreen: false   
     //  show: true
 
      
@@ -23,7 +25,15 @@ export default Vue.extend({
     zoomout(){
 if(this.imagewidth!==100)
 this.imagewidth=this.imagewidth-10;
+    },
+    toggle () {
+      this.$refs['fullscreen'].toggle() // recommended
+      // this.fullscreen = !this.fullscreen // deprecated
+    },
+    fullscreenChange (fullscreen) {
+      this.fullscreen = fullscreen
     }
+
   },
   created: function () {
   }

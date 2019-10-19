@@ -3,18 +3,29 @@
   
 <div  v-bind:class="[{imagezoomfullscreen:fullshow},{imagezoom:normalshow }]">
     <div class="image-zoom-container ">
-        
+        <fullscreen ref="fullscreen" @change="fullscreenChange">
            
                 <img v-bind:style="{ width:imagewidth+'%'}" src="./static/assets/images/cover-image.png" alt="">
-        
+            </fullscreen>
     </div>
 
 
     
 
 </div>
+<button type="button" @click="toggle" >Fullscreen</button>
 <button v-on:click="zoomin">zoomin</button>
 <button v-on:click="zoomout">zoomout</button>
 <button class="screen" v-on:click="fullshow=!fullshow , normalshow=!normalshow">fullscreen</button>
+
+
+
+
+ 
+  <!--  deprecated
+    <fullscreen :fullscreen.sync="fullscreen">
+      Content
+    </fullscreen>
+  -->
 
 </div>

@@ -8,8 +8,9 @@ import designview from '../components/designview/designview'
 import login from '../components/login/login'
 import dashboard from '../components/dashboard/dashboard'
 import zoomimage from '../components/zoomimage/zoomimage'
-
+import loginpage from '../components/loginpage/loginpage'
 /* eslint-disable */
+
 
 Vue.use(Router);
 export default new Router({
@@ -18,6 +19,11 @@ export default new Router({
           path: '/projectform',
           name: 'projectform',
           component: projectform
+        },
+        {
+          path:'/loginpage',
+          name:'loginpage',
+          component:loginpage
         },
         {
           path: '',

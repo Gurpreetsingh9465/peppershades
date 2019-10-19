@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import Vue from 'vue';
 import template from './header.html'
 import styles from './header.less'

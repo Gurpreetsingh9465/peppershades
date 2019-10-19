@@ -15,6 +15,45 @@
 .tabs{
 	display: flex;
 }
+
+#chip-list{
+    display: flex;
+    margin: 0px 16px 16px 0px;
+    padding: 4px 4px;
+    height: fit-content;
+    
+    height: 32px;
+    border-radius:25px;
+    background-color: #f1f1f1;
+    transition: 0.5s;
+}
+.chip-list{
+    display: flex;
+}
+
+.chips-enter-active, .chips-leave-active {
+    transition: opacity .5s;
+  }
+  .chips-enter, .chips-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+  .chip-close{
+      cursor: pointer;
+  }
+.chip-text{
+
+    
+}
+.chip-text p{
+    height: 32px !important;
+    width: 100%;
+}
+.chip-icon{
+    height: 24px;
+    width: 24px;
+}
+
+
 .tabs .active{
 	background: none !important;
 	color: @theme-color !important;
@@ -22,9 +61,21 @@
 	font-size: 36px;
 	border-bottom: 1px solid @theme-color;
 }
+.input-link input{
+    border-bottom:none !important;
+    min-height: 32px;
+    transition: 0.5s;
+}
+.chips-link{
+    display: flex !important;
+    padding: 16px;
+    height: auto;
+}
+
 .tab{
 	width: 33.33%;
 }
+
 .tab a{
     height: 96px;
     border-radius: 0px !important;

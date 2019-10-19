@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import Vue from 'vue';
 import template from './designview.html'
 import styles from './designview.less'

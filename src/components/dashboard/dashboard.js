@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import Vue from 'vue';
 import template from './dashboard.html'
 import styles from './dashboard.less'

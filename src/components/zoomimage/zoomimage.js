@@ -2,6 +2,7 @@ import Vue from 'vue';
 import template from './zoomimage.html'
 import styles from './zoomimage.less'
 
+/* eslint-disable */
 
 export default Vue.extend({
   template: template,

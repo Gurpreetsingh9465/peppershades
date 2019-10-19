@@ -9,6 +9,8 @@ import login from '../components/login/login'
 import dashboard from '../components/dashboard/dashboard'
 import zoomimage from '../components/zoomimage/zoomimage'
 
+/* eslint-disable */
+
 Vue.use(Router);
 export default new Router({
   routes: [

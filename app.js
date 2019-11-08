@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
 const projectRoutes = require('./api/routes/projects')
+const selectandaddRoutes = require('./api/routes/selectandadds')
 
 mongoose.connect('mongodb://localhost/peppershades', { useNewUrlParser: true })
     // mongoose.Promise = global.Promise;
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use('/projects', projectRoutes)
+app.use('/selectandadd', selectandaddRoutes)
 
 app.use((req, res, next) => {
     const error = new Error('Not Found')

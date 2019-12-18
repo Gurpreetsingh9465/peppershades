@@ -1,172 +1,145 @@
 @import "../../assets/common.less";
 @import "../../assets/fonts.less";
 
-
-// Project Initialize
-
-.heading{
-    height: 224px;
-    
-}
-.inside-row{
-    height:96px;
-    
-}
-.tabs{
-	display: flex;
+.project-form{
+    height: 100%;
 }
 
-#chip-list{
-    display: flex;
-    margin: 0px 16px 16px 0px;
-    padding: 4px 4px;
-    height: fit-content;
-    
-    height: 32px;
-    border-radius:25px;
-    background-color: #f1f1f1;
-    transition: 0.5s;
-}
-.chip-list{
-    display: flex;
-}
-
-.chips-enter-active, .chips-leave-active {
-    transition: opacity .5s;
-  }
-  .chips-enter, .chips-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    opacity: 0;
-  }
-  .chip-close{
-      cursor: pointer;
-  }
-.chip-text{
-
-    
-}
-.chip-text p{
-    height: 32px !important;
-    width: 100%;
-}
-.chip-icon{
-    height: 24px;
-    width: 24px;
-}
-
-
-.tabs .active{
-	background: none !important;
-	color: @theme-color !important;
-	border-radius: 0px !important;
-	font-size: 36px;
-	border-bottom: 1px solid @theme-color;
-}
-.input-link input{
-    border-bottom:none !important;
-    min-height: 32px;
-    transition: 0.5s;
-}
-.chips-link{
-    display: flex !important;
-    padding: 16px;
-    height: auto;
+.side-container{
+    height: 100%;
+    margin-top: 10%;
+    margin-top: max(128px);
 }
 
 .tab{
-	width: 33.33%;
+    
+    margin: 32px 32px;
+    widows: 100%;
+    transition: .5s;
+    display: flex; 
+}
+.tab-content{
+    height: fit-content;
 }
 
-.tab a{
-    height: 96px;
-    border-radius: 0px !important;
-	border-bottom: 1px solid black;
-	padding:24px !important;
-	font-family: Regular;
-	font-size: 24px;
-	color: black;
-	transition: 0.3s;
-	
+.tab-icon{
+    
+    height: 4px;
+    width: 16px;
+    transition: .5s;
+    border-radius: 8px;
 }
-
-.main-title{    
- height:100%;
-}
-.back-arrow{    
-    height: 100%;
-    width: 96px;
-}
-.heading-text{    
-    height: 100%;
-    width: 100%;
-    padding: 16px;    
-}
-.display{
-    display: flex;
-    flex-direction: row;
-}
-
-.dd{    
-    width: 83.33%;   
-}
-.options{
-    height: 128px;
-}
-
-
-// Select and Add
-
-.item-classify{
-    width: 100%;
-    margin: 64px 16px 8px 16px;
-    padding: 16px 16px 8px 16px;
-    background: rgba(0, 0, 0, 5%);
-}
-.active-item{
-    border: 1px solid @theme-color ;
-}
-
-.item-margin{
+.tab-button{
+    text-align: left;
+    background: none;
+    border: none;
     padding: 16px;
+    transition: .5s;
+}
+
+.tab-active .tab-button h5{
+    font-size: 32px !important;
+    font-weight: bolder;
+    color: @theme-color;
+}
+.tab-active .tab-icon{
+    width: 32px;
+    height: 4px;
+    background: @theme-color;
     
+}
+.tab-done .tab-icon{
+    
+    background:  #25DF25 !important;
+}
 
+.controller{
+    
+    height: 96px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0px 0px;
+    
 }
 
 
-.active{
-    border-bottom:1px solid @theme-color ;
+//Components
+
+//Package
+.package-container{    
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 16px 0px;
+    height: 304px;
 }
-.item{
-    width:100%;
+
+.package:first-child{
+    margin-left: 0px;    
+}
+.package{
+    flex: 0 0 auto;    
+    color: white !important;
+    border: none !important;
+    border-radius: 16px;    
     height: 256px;
-}
-.item img{
-    width: 64px;
-    height: 64px;
-}
-.item{
-    padding: 32px;
-  
-
-}
-.col-lg-2{
-    width: 20.83% !important;
+    width: 480px;
+    margin:24px 8px;
+    background: #F35252;    
 }
 
-.item p{
-    opacity: 70%;
+.package h4{
+    margin-top: 32px;
+    padding: 0px 32px;    
+    word-wrap: break-word;
 }
-.non-active:hover{
-    cursor: pointer;
-    border: 1px solid black;
-    transition: 0.8s;
+.package p{
+    padding: 0px 32px;
 }
-.non-active{
-    border: 1px solid transparent;
-}
-.active-item:hover{
-    cursor: pointer;
-}
-@media only screen and (max-width: 1440px) {
+
+.package img{
     
+    width: 240px;
+    height: 256px;
     
-  }
+}
+
+
+//Serivice Pills
+.service-pills{
+    margin: 24px 0px;
+    display: flex;
+}
+.service-pill{
+    padding: 8px 16px;
+    margin-right: 16px;
+    width: fit-content;
+    border-radius: 24px;
+}
+.service-pill-active{
+    background: @theme-color;
+    color: white;
+    font-weight: bold;
+}
+.service-category{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.service{
+    width: 216px;
+    height: 160px;
+    padding: 24px;   
+    border-radius: 12px; 
+    border: solid 1px black;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+.service i{
+    width: 48px;
+    height: 48px;
+}

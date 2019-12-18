@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import template from './zoomimage.html'
-import styles from './zoomimage.less'
+import template from './projectView.html'
+import styles from './projectView.less'
 
 /* eslint-disable */
 import fullscreen from 'vue-fullscreen'
@@ -21,12 +21,12 @@ export default Vue.extend({
   },
   methods: {
     zoomin(){
-    this.imagewidth = this.imagewidth+ 10;
+    this.imagewidth = this.imagewidth + 10;
 
     },
     zoomout(){
-if(this.imagewidth!==100)
-this.imagewidth=this.imagewidth-10;
+        if(this.imagewidth!==100)
+        this.imagewidth=this.imagewidth-10;
     },
     toggle () {
       this.$refs['fullscreen'].toggle() // recommended

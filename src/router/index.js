@@ -2,13 +2,13 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import header from '../components/header/header'
 import root from '../components/root/root'
-import projectform from '../components/projectform/projectform'
+import projectForm from '../components/projectForm/projectForm'
 import homepage from '../components/homepage/homepage'
-import designview from '../components/designview/designview'
+import chatBox from '../components/chatBox/chatBox'
 import login from '../components/login/login'
 import dashboard from '../components/dashboard/dashboard'
-import zoomimage from '../components/zoomimage/zoomimage'
-import loginpage from '../components/loginpage/loginpage'
+import projectView from '../components/projectView/projectView'
+
 /* eslint-disable */
 
 
@@ -17,13 +17,13 @@ export default new Router({
   routes: [
         {
           path: '/projectform',
-          name: 'projectform',
-          component: projectform
+          name: 'projectForm',
+          component: projectForm
         },
         {
-          path:'/loginpage',
-          name:'loginpage',
-          component:loginpage
+          path:'/login',
+          name:'login',
+          component:login
         },
         {
           path: '',
@@ -35,18 +35,15 @@ export default new Router({
           name: 'dashboard',
           component: dashboard
         },
-
         {
-          path: '/zoomimage',
-          name:'zoomimage',
-          component:zoomimage
+          path: '/projectview',
+          name:'projectView',
+          component:projectView
         },
-   
-
         {
-          path: '/designview',
-          name: 'designview',
-          component: designview
+          path: '/chatbox',
+          name: 'chatBox',
+          component: chatBox
         },
         {
           path: '/login',

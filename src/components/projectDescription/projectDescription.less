@@ -1,0 +1,67 @@
+@import "../../assets/common.less";
+@import "../../assets/fonts.less";
+
+.pro-form{
+	
+	
+	padding:32px;
+	
+}
+
+.chip-list{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 8px 16px;
+    
+}
+
+.chip-link{
+    
+    
+    height: 32px;
+    border-radius: 24px;
+    display: flex;
+    padding: 4px;
+    margin: 8px 4px;
+}
+.chip-icon{
+    border-radius: 16px;
+    background: red;
+}
+.chip-icon img{
+    height: 24px;
+    width: 24px;
+}
+.chip-text{
+    padding: 0px 0px 0px 8px;    
+}
+.chip-text a{
+    max-width: 192px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.chip-close{
+    display: none !important;
+    width: 16px;       
+}
+.chip-close:hover{
+    cursor: pointer;
+}
+.chip-close i{
+    display: none;
+}
+.chip-link:hover{
+    background: #f5f5f5;
+}
+.chip-link:hover .chip-close i{
+    display: block;
+}
+.input-link{
+    width: 100%;
+    padding: 0px 16px;
+}
+
+.marketDetails{
+    height: fit-content;
+}

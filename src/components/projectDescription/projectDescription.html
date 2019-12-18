@@ -1,0 +1,101 @@
+                
+                <div class="pro-form col-lg-8">
+                
+                  
+                    
+                        
+                    <div class="row">
+            
+                            <!-- Single Line Box -->
+                            <div class="text-box col-lg-8 mb-32">                                
+                                <input type="text" id="project-name" aria-describedby="emailHelp" placeholder="Name">
+                               <p class="err" v-if="0"> ! This is required</p>
+                            </div>
+                            
+                            
+                            
+                            <!-- Dropdowns -->
+                            <div class="text-box col-lg-4 mb-32 ">                              
+                            <input type="text" v-model = "projectType" placeholder="Type" list="projecttypes"/>
+                                                           
+                            </div>
+            
+                            <!-- Multiline Box -->
+                            <div class="multitext-box col-lg-12 mb-32">                                           
+                                
+                                <textarea type="text" rows="3" cols="100" id="project-desc" aria-describedby="emailHelp" placeholder="Description"></textarea>
+                            </div>
+            
+                            <!-- Multiline Box -->
+                            <div class="multitext-box col-lg-12 mb-32">                                           
+                                
+                                    <textarea type="text" rows="3" cols="100" id="project-desc" aria-describedby="emailHelp" placeholder="Values, Strengths of your projects"></textarea>
+                                </div>
+
+                            <!-- Single Line Box -->
+                            <p class="col-lg-6 text-left">Budget (Rs.)</p>
+                            <p class="col-lg-6 text-left">Deadline </p>
+                            <div class="text-box col-lg-6 mb-32 mt-8 "> 
+                                                                 
+                                    <input type="text" id="project-name" aria-describedby="emailHelp" placeholder="3000">
+                                   <p class="err" v-if="0"> ! This is required</p>
+                                </div>
+                            
+                                <!-- Single Line Box -->
+                            <div class="text-box col-lg-6 mb-32 mt-8">                                
+                                    <input type="text" id="project-name" aria-describedby="emailHelp" placeholder="17 December">
+                                   <p class="err" v-if="0"> ! This is required</p>
+                                </div>
+
+                            
+                            <p class="col-lg-12 mb-16 text-left">Language</p>
+                            <div class="text-box mb-32  col-lg-6 mt-8" >                              
+                                    <input type="text" id="project-type" placeholder="Language" list="projecttypes"/>
+                                            <datalist style="background-color: white; color:black;" id="projecttypes">
+                                                <option>Corporate</option>
+                                                <option>Start-Up</option>
+                                                <option>Event</option>
+                                            </datalist>                                     
+                                    </div>
+
+
+
+                            <p class="col-lg-12 text-left mb-16">Important Links</p>
+                                 <!-- chips link-->
+                            <div class="col-lg-12 mb-32 mt-8 chips-link">
+                                    <div class="input-link center">
+                                            <input type="text" placeholder="Enter Link" v-model="chipValue" @keyup.enter="addLink" >       
+    
+                                    </div>
+                                        <transition-group name="chips" class="chip-list" tag="div">
+                                                <div v-for="(item,index) in chips" v-if="index >= 1" v-bind:key="item">
+                                                <div class="chip-link">
+                                                    <div class="chip-icon center">
+                                                            <img src="" alt="">
+                                                    </div>   
+                                                    <div class="chip-text center" >
+                                                            <a  @click="redirect(item.href)" class="body1">{{item.name}}</a>      
+                                                    </div>
+                                                    <div class="chip-close center" > 
+                                                                <i class="fa fa-close"  v-on:click="removeChip(index)"></i>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                        </transition-group>                                
+                                
+                            </div>    
+            
+                            <!-- chips link-->
+
+                            <div class="multitext-box col-lg-12 mb-32">                                           
+                                
+                                    <textarea type="text" rows="3" cols="100" id="project-desc" aria-describedby="emailHelp" placeholder="Values, Strengths of your projects"></textarea>
+                                </div>
+
+                            
+            
+                    </div>
+            
+                    
+                        
+                </div>

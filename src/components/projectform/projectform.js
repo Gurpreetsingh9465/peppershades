@@ -1,28 +1,37 @@
 import Vue from 'vue';
-import template from './projectform.html'
-import styles from './projectform.less'
+import template from './projectForm.html'
+import styles from './projectForm.less'
+import projectDescription from '../projectDescription/projectDescription'
+import marketDetails from '../marketDetails/marketDetails'
 
 /* eslint-disable */
 
 export default Vue.extend({
   template: template,
+  components: {
+    projectDescription,
+    marketDetails
+  },
   data: function () {
     return {
       chips:[],
-      chipValue:''
-
+      chipValue:'',
+      currentTab: 2,
+      showForm: false
     }
   },
   methods: {
-    addLink(){
-      this.chips.push(this.chipValue)
-      this.chipValue=''
+    
+    setTab(tabNumber){
+        this.currentTab = tabNumber
     },
-    removeChip(){
-      this.chips.pop(this.chipValue)
+    nextTab(){
+      this.currentTab += 1
     }
+    
   },
   created: function () {
+    
     
 
   }

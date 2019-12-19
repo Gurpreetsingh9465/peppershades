@@ -39,42 +39,20 @@
                 <div v-if="currentTab == 1" class="tab-content"> 
                                                   
                         <div class="package-container">                                              
-                                <div class="package">
-                                        <div class="row">                                               
-                                                <div class="col-lg-6">
-                                                        <h4 class="bold">Youtube Branding</h4>
-                                                        <p class="mt-8">Starting from 1099/-</p>
+                                <div v-for="pack in packages" :style="{'background':pack.color}" class="package">
+                                                <div class="row">
+                                                        <div class="pack-split-1">
+                                                        <h4 class="bold">{{pack.name}}</h4>
+                                                        <p class="mt-8">Starting from {{pack.price}}/-</p>
                                                         <i></i>          
-                                                </div>
-                                                <div class="col-lg-6">
-                                                        <img src="/static/assets/images/packages/youtubeBranding.png"/> 
-                                                </div>
-                                        </div>                    
+                                                        </div>
+                                                        <div class="pack-split-2">
+                                                        <img src=""/> 
+                                                        </div>
+                                                </div>                       
+                                                          
                                 </div>
-                                <div class="package">
-                                                <div class="row">                                               
-                                                        <div class="col-lg-6">
-                                                                <h4 class="bold">Youtube Branding</h4>
-                                                                <p class="mt-8">Starting from 1099/-</p>
-                                                                <i></i>          
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                                <img src="/static/assets/images/packages/youtubeBranding.png"/> 
-                                                        </div>
-                                                </div>                    
-                                        </div>
-                                        <div class="package">
-                                                        <div class="row">                                               
-                                                                <div class="col-lg-6">
-                                                                        <h4 class="bold">Youtube Branding</h4>
-                                                                        <p class="mt-8">Starting from 1099/-</p>
-                                                                        <i></i>          
-                                                                </div>
-                                                                <div class="col-lg-6">
-                                                                        <img src="/static/assets/images/packages/youtubeBranding.png"/> 
-                                                                </div>
-                                                        </div>                    
-                                                </div>
+                                
                                
                         </div>
 
@@ -89,10 +67,10 @@
                         </div>
 
                         <div class="service-category">
-                                <div class="service">
+                                <div v-for="service in services" class="service">
                                         <i class="fa fa-facebook"></i>
-                                        <h5>Logo</h5>
-                                        <p>From 399/-</p>
+                                        <h5>{{service.name}}</h5>
+                                        <p>From {{service.price}}/-</p>
                                 </div>
                                 <div class="service">
                                         <i class="fa fa-facebook"></i>

@@ -1,0 +1,74 @@
+{
+    "packages":[
+        {
+            "name" : "Youtube Branding",
+            "color": "Red",
+            "includedIn" : {
+                "green": true,
+                "yellow": true,
+                "red": true
+            },
+            "Price":1099,
+            "minimumHrs": {
+                "green": 7,
+                "yellow": 12,
+                "red": 12
+            },
+            "deliverables": ["Channel Logo", "Youtube Banner"]
+        },
+        {
+            "name" : "Social Media Advertisement",
+            "color": "Blue",
+            "includedIn" : {
+                "green": false,
+                "yellow": true,
+                "red": true
+            },
+            "Price":1099,
+            "minimumHrs": {
+                "green": 7,
+                "yellow": 12,
+                "red": 12
+            },
+            "deliverables": ["Banner", "Posters"]
+        },
+        {
+            "name" : "Starting a new business",
+            "color": "Blue",
+            "includedIn" : {
+                "green": false,
+                "yellow": true,
+                "red": true
+            },
+            "Price":1099,
+            "minimumHrs": {
+                "green": 7,
+                "yellow": 12,
+                "red": 12
+            },
+            "deliverables": ["Logo", "ID Cards", "T-Shirt", "Visiting Card", "Flex Board"]
+        }
+    ],
+    "services":[
+        {
+            "name": "Logo",
+            "category" : "Brand Identity",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 4,
+                "yellow" : 3,
+                "red" : 8
+            }
+        },
+        {
+            "name": "Posters",
+            "category" : "Advertisement",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        }
+    ]
+}

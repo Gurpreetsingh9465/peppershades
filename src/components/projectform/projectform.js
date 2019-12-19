@@ -15,7 +15,7 @@ export default Vue.extend({
   },
   data: function () {
     return {
-      currentTab: 2,
+      currentTab: 1,
       showForm: false,
       selectedServices: [{
         serviceName: '',

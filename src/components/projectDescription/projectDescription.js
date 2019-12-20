@@ -14,6 +14,11 @@ export default Vue.extend({
         href: ''
       }],
       chipValue:'', 
+      ProjectDescription:[{
+        name:'',
+        industry:'',
+        target:'',
+        description:'' }]
 
     }
   },
@@ -48,6 +53,9 @@ export default Vue.extend({
     },
     redirect(href){
       window.location.href = href
+    },
+    submit: function(){
+      this.$emit("inputdata",this.ProjectDescription);
     }
     
     

@@ -4,6 +4,7 @@ import styles from './projectForm.less'
 import projectDescription from '../projectDescription/projectDescription'
 import marketDetails from '../marketDetails/marketDetails'
 import services from '../../staticData/services.json'
+import service from '../service.vue'
 
 /* eslint-disable */
 
@@ -11,7 +12,8 @@ export default Vue.extend({
   template: template,
   components: {
     projectDescription,
-    marketDetails
+    marketDetails,
+    service
   },
   data: function () {
     return {
@@ -24,8 +26,23 @@ export default Vue.extend({
         designImages: '',
         timeElapsed: 0,
         basePay: 0
-      }]
+      }],
+      docH : 0,
+      docW: 0
+      
     }
+  },
+   created() {
+     this.onResize()
+      
+      
+  },
+  mounted(){
+    window.addEventListener('resize', this.onResize)
+    
+  },
+  updated(){
+        
   },
   methods: {
     
@@ -37,14 +54,50 @@ export default Vue.extend({
     },
     categorize(category){
       this.services = this.services.filter( item => item.category === category)
+    },    
+    
+    select(name, price){
+      
+      
+      var flag = false
+      
+      this.selectedServices.forEach(element => {
+        if(element.serviceName === name){
+          this.selectedServices = this.selectedServices.filter(service =>
+              service.serviceName !== name              
+          )
+          
+          flag = false
+        }
+        else flag = true       
+
+        })
+
+        if(flag === true){
+          this.selectedServices.push({
+          serviceName: name,
+          currentStatus: 'Not Started',
+          finalDesign: '',
+          designImages: '',
+          timeElapsed: 0,
+          basePay: price
+          })
+        }
+        
+        flag = false
+
+    },
+    onResize(){
+      this.docW = window.innerWidth ||
+                  document.documentElement.clientWidth || 
+                  document.body.clientWidth; 
+      this.docH = window.innerHeight || 
+                  document.documentElement.clientHeight || 
+                  document.body.clientHeight; 
     }
     
   },
-  created: function () {
-    
-    
-
-  },
+ 
   computed: {
     
     packages() {

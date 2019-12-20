@@ -1,29 +1,42 @@
-<div class="login-main">
-<div class="row">
-    <div class="col-lg-8 loginpage offset-2">
+<div class="login-main side">
+    <div class="social-bar">
+            <i></i><i></i><i></i><i></i>
+            <div class="vertical-line"></div>
+            
+      </div> 
+
         <div class="row">
-            <div class="col-lg-6"> 
+            <div class="login-section "> 
+
+                <h2>Log In</h2>
+                <div class="mt-32"><p class="body1"> Already have an account? <a>SIGN UP</a></p> </div>
+                <form class="mt-64">
+                    <div class="form-group">
+                   
+                      <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      
+                    </div>
+                    <div class="form-group">
+                 
+                      <input type="password"  id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <p v-if="1" class="mt-16" class="error"> <i class="fa fa-error"></i>! This is error</p>
+                  
+                    <button type="submit" class="mt-32">Log In</button>
+                    <!-- <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false">
+                           login with facebook
+                    </div> -->
+                    
+                  </form>
+                  <div class="absolute apply-as-fl">
+                      <P>Searching for work?</P>
+                      <a class="mt-8">APPLY AS FREELANCER</a>
+                  </div>
             </div>
-            <div class="col-lg-4">
-                    <form>
-                            <div class="form-group">
-                           
-                              <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                              
-                            </div>
-                            <div class="form-group">
-                         
-                              <input type="password"  id="exampleInputPassword1" placeholder="Password">
-                            </div>
-                          <div class="">
-                            <button type="submit" class="btn-solid">Submit</button></div>
-                            <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false">
-                                   login with facebook
-                            </div>
-                          </form>
+            <div class="cover-section">
+                    <cover></cover>
             </div>
         </div>
-    </div>
     
 
 </div>

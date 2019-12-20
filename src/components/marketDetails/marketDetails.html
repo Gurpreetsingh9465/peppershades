@@ -1,34 +1,52 @@
-<div class="row">
+<div class="row marketDetails">
+<br>
+<div class="col-lg-12 mt-32"><h5>Audience & Marketing</h5></div>
 
-      
-
+<div class="col-lg-12 mt-8"><p class="col-lg-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
           <!-- Single Line Box -->
-<div class="text-box col-lg-12 mb-32">                                
-        <input type="text" id="project-name" aria-describedby="emailHelp" placeholder="Name">
+<div class="text-box col-lg-12 mb-32 mt-32">                                
+        <select>
+                <option value="">Type</option>
+                <option value="All">All</option>
+                <option value="saab">Students</option>
+                <option value="mercedes">Entrepreneurs</option>
+                <option value="audi">Engineers</option>
+                <option value="audi">Doctors</option>
+              </select> 
        
     </div>
     
     
     
     <!-- Dropdowns -->
-    <div class="text-box col-lg-4 mb-32 ">                              
-    <input type="text" v-model = "projectType" placeholder="Type" list="projecttypes"/>
-                                   
-    </div>
+    
 
      <!-- Dropdowns -->
-     <div class="text-box col-lg-4 mb-32 ">                              
-            <input type="text" v-model = "projectType" placeholder="Type" list="projecttypes"/>
+     <p class="col-lg-12 text-left mb-16">Age</p>
+     <div class="text-box col-lg-4 mb-32 mt-16 ">                              
+            <input type="select" v-model = "projectType" placeholder="Minimum Age" list="projecttypes"/>
                                            
             </div>
 
      <!-- Dropdowns -->
-     <div class="text-box col-lg-4 mb-32 ">                              
-            <input type="text" v-model = "projectType" placeholder="Type" list="projecttypes"/>
+     <div class="text-box col-lg-4 mb-32 mt-16 ">                              
+            <input type="select" v-model = "projectType" placeholder="Maximum Age" list="projecttypes"/>
                                            
             </div>
 
-              
+            <p class="col-lg-12 text-left mb-16">Gender</p>
+            <div class="text-box col-lg-4 mb-32 mt-16 ">                              
+                    
+                    <select>
+                            
+                            <option value="All">All</option>
+                            <option value="Both">Male & Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                          </select> 
+                                                   
+                    </div>    
 
       </div>
       

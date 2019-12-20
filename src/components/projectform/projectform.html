@@ -1,22 +1,21 @@
+<div class="projectForm" >
+    <div class="social-bar">
 
-
-<div class="projectForm">
-        
-    <div class="row">
-        <div class="side-container col-lg-4">
-                <div class="tab tab-done">
-                        
+    </div>    
+    <div class="row no-wrap">
+        <div class="side-container side">
+                <div class="fixed" :class = "{'slide-up': currentTab === 2}">
+                <div class="tab tab-done text-left">                        
                         <div class="v-center" >
                              <div class="tab-icon"></div>   
-                        </div>
-                        
+                        </div>                        
                         <div class="tab-button">
-                                       <h5> Service Type </h5>
+                                       <h5> Service Type</h5>
                         </div>
                 </div>
                 <div class="tab" :class="{ 'tab-active' : currentTab === 1, 'tab-done': currentTab === 2}">
                         
-                                <div class="v-center" >
+                                <div :class="{'v-down': currentTab === 1, 'v-center': currentTab === 2 }" >
                                                 <div class="tab-icon"></div>   
                                            </div>
                         
@@ -25,20 +24,21 @@
                         </div>
                 </div>
                 <div class="tab" :class="{ 'tab-active' : currentTab === 2}">
-                                <div v-if="currentTab === 2" class="v-center" >
+                                <div v-if="currentTab === 2" :class="{'v-down': currentTab === 2 }" >
                                                 <div class="tab-icon"></div>   
                                            </div>
                         <div v-else class="v-center"><h5 class="numbering">03</h5></div>
                         <div class="tab-button" @click = "setTab(2)" >
                                         <h5> Project  Description</h5>
                         </div>
-                </div>                
+                </div> 
+        </div>               
         </div>
 
-        <div class="project-form col-lg-8">
+        <div class="project-form " :style = "{'width': this.docW - 596 + 'px'}">
                 <div v-if="currentTab == 1" class="tab-content"> 
                                                   
-                        <div class="package-container">                                              
+                        <div class="package-container mb-16">                                              
                                 <div v-for="pack in packages" :style="{'background':pack.color}" class="package">
                                                 <div class="row">
                                                         <div class="pack-split-1">
@@ -56,7 +56,7 @@
                                
                         </div>
 
-                        <p> or Choose services here</p>
+                        <p class=""> or Choose services here</p>
 
                         <div class="service-pills">
                                 <div class="service-pill service-pill-active"><p>All</p></div>
@@ -67,50 +67,48 @@
                         </div>
 
                         <div class="service-category">
-                                <div v-for="service in services" class="service">
-                                        <i class="fa fa-facebook"></i>
-                                        <h5>{{service.name}}</h5>
-                                        <p>From {{service.price}}/-</p>
+                                <div @click = "select(item.name, item.price)" v-for="(item, index) in services">
+                                        <service :name = "item.name" :price="item.price" :active = "false" :index="index" :key = "item.name" ></service> 
                                 </div>
-                                <div class="service">
-                                        <i class="fa fa-facebook"></i>
-                                        <h5>Logo</h5>
-                                        <p>From 399/-</p>
-                                </div>
+                                
                         </div>
 
 
                 </div>
                 <div v-if="currentTab == 2" class ="tab-content"> 
+                                
                                 <div v-if="showForm" class="col-lg-8">
                                                 <a class="col-lg-12 text-left mt-16 mb-32" @click="showForm = false">BACK</a> 
                                                 <marketDetails></marketDetails>
                                 </div>
+                                
                                 <div v-else>
                                         <projectDescription></projectDescription>
                                         <h6 class="col-lg-12 text-left">Audience & Market Details</h6>
-                                        <p class="col-lg-6 text-left  mb-32">
+                                        <p class="col-lg-6 text-left  mb-16">
                                            This information is needed for branding & marketing purposes. You can skip it if you are on smaller design projects.
                                         </p><br>
             
             
-                                        <a class="col-lg-12 text-left " @click="showForm = true">START FILLING IT</a>
+                                        <a class="col-lg-12 text-left" @click="showForm = true">START FILLING IT</a>
+                                        <div style="height: 256px;"></div>
                                 </div>
+                        
+                                
 
                       
                 </div>
-
-                <div class="controller mt-32">                       
-                        <button v-if="currentTab === 2 && !showForm " @click = "" >Initialize <i class="fa fa-next"></i></button>        
-                        <button v-else-if = "currentTab === 3 && !showForm"  @click = "nextTab" >Project Description <i class="fa fa-next"></i></button>
-                        
-                </div>
-        </div>
-      
+                <div class="controller mt-32" :style="{'width': docW - 96 + 'px'}">  
+                                <p class="float-left">*Terms & Condition Apply</p>                     
+                                <button v-if="currentTab === 2 && !showForm " @click = "" class="float-right" >Initialize <i class="fa fa-next"></i></button>        
+                                <button v-else-if = "currentTab === 1"  @click = "nextTab" class="float-right" >Project Description <i class="fa fa-next"></i></button>
+                                
+                        </div>               
+        </div>      
     </div>
-        
+   
 </div>
-</div>
+
     
 
 

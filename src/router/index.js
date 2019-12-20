@@ -8,6 +8,8 @@ import chatBox from '../components/chatBox/chatBox'
 import login from '../components/login/login'
 import dashboard from '../components/dashboard/dashboard'
 import projectView from '../components/projectView/projectView'
+import signup from '../components/signup/signup'
+import password from '../components/password/password'
 
 /* eslint-disable */
 
@@ -49,6 +51,16 @@ export default new Router({
           path: '/login',
           name: 'login',
           component: login
+        },
+        {
+          path: '/signup',
+          name: 'signup',
+          component: signup
+        },
+        {
+          path: '/password/:state',
+          name: 'password',
+          component: password
         }
       
    

@@ -1,23 +1,26 @@
 <div class="main-header">
   <div class="header-top">
-     <div class="profile-pic"></div>
+     <div class="profile-pic">
+        <img src="/static/assets/images/pro-pic.jpg" height = "48" width="48" alt="">
+     </div>
      <div class="navtop">
         <div class="links center">
-           <p class="">CREATE PROJECT</p>
-        </div>
-        <div class="link center">
-           <p class="">THE PROCESS</p>
+           <p class="bold" :class = "{'active': active === 'home'}">HOME</p>
         </div>
         <div class="links center">
-           <p class="">PORTFOLIO</p>
+           <p class="bold" :class = "{'active': active === 'process'}">OUR PROCESS</p>
         </div>
         <div class="links center">
-           <p class="">BLOG</p>
+           <p class="bold" :class = "{'active': active === 'portfolio'}">PORTFOLIO</p>
         </div>
         <div class="links center">
-           <p class="">HELP</p>
+           <p class="bold" :class = "{'active': active === 'blog'}">BLOG</p>
+        </div>
+        <div class="links center">
+           <p class="bold" :class = "{'active': active === 'help'}">HELP</p>
         </div>
      </div>
+     
   </div>
   <div class="side-pane"> </div>
   

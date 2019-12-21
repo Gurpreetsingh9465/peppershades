@@ -9,6 +9,7 @@
 	padding-left: 96px;
 }
 .view, .root-main, #app {
+	font-family: Regular;
 	height: 100%;
 }
 .no-wrap{
@@ -139,6 +140,15 @@ justify-content: center !important;
 a{
 	font-family: SemiBold;
 	color: @theme-color !important;
+	transition: 0.5s;
+}
+a i{
+	transition: 0.5s;
+	margin-left: 0px;
+	font-size: 16px;
+}
+a:hover i {
+	margin-left: 16px;
 }
 
 a:hover{
@@ -185,27 +195,30 @@ button{
 	font-size: 16px;
 	font-family: SemiBold;
 	border:none;
-	border-radius: 12px !important;
-	
+	border-radius: 12px !important;	
 	transition: 0.3s;
 }
-.btn-second{
-	border: 1px black solid;
-	background: none;
-	color: black;
+button i{
+	margin-left: 8px;
+	padding-bottom: 2px;
+	vertical-align: middle;
 }
+.btn-secondary{
+	background: black;	
+}
+
 
 button:hover{
 	background: #FF4D5E;
 }
 
-.btn-second:hover{
+.btn-secondary:hover{
 	
-	background:#D8D8D8;
+	background:rgb(100, 100, 100);
 }
-.btn-second:active{
+.btn-secondary:active{
 	
-	background:  #B1B1B1;
+	background: rgb(133, 133, 133) ;
 }
 
 button:active{
@@ -215,7 +228,7 @@ button:active{
 
 .text-box{
 	padding: 0px 16px !important;
-	height: 48px;	
+	
 	
 }
 .multitext-box{
@@ -225,8 +238,7 @@ button:active{
 	flex-direction: column;	
 }
 
-input, textarea{
-	
+input, textarea{	
 	transition: 0.5s;
 	height: 48px;
 	border: none !important;
@@ -249,9 +261,6 @@ input::-moz-placeholder, textarea::-moz-placeholder{
 input::-moz-placeholder, textarea::-moz-placeholder{
 	color: #1E1E1E;
 }
-
-
-
 
 textarea{
 	height: 96px;
@@ -286,20 +295,8 @@ select{
 	top: 0;
 	left: 0;
 }
-.social-bar .vertical-line{
-	margin-top: 12px;
-	width: 2px;
-	height: 96px;
-	background: black;
-}
-.social-bar i{
-	padding: 12px;
-	margin: 12px 32px;
-	width: 32px;
-	height: 32px;
-	background: black;
-	border-radius: 100%;
-}
+
+
 
 
 @media only screen and (max-width: 1000px){

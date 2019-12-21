@@ -4,7 +4,8 @@ import styles from './projectForm.less'
 import projectDescription from '../projectDescription/projectDescription'
 import marketDetails from '../marketDetails/marketDetails'
 import services from '../../staticData/services.json'
-import service from '../service.vue'
+import service from '../UI/service.vue'
+import socialBar from '../UI/socialBar.vue'
 
 /* eslint-disable */
 
@@ -13,7 +14,8 @@ export default Vue.extend({
   components: {
     projectDescription,
     marketDetails,
-    service
+    service,
+    socialBar
   },
   data: function () {
     return {
@@ -94,7 +96,8 @@ export default Vue.extend({
       this.docH = window.innerHeight || 
                   document.documentElement.clientHeight || 
                   document.body.clientHeight; 
-    }
+    },
+    
     
   },
  

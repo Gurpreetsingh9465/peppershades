@@ -3,13 +3,16 @@
 import Vue from 'vue';
 import template from './password.html'
 import styles from './password.less'
+import socialBar from '../UI/socialBar.vue'
 
 export default Vue.extend({
     template: template,
-
+    components: {
+        socialBar
+    },
     data: function() {
         return {
-            state: this.$route.params.state
+            old: 'true'
         }
     },
     methods: {

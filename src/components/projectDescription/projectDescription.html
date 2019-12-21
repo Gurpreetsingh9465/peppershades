@@ -17,7 +17,7 @@
                             <!-- Dropdowns -->
                             <div class="text-box col-lg-4 mb-32 ">                              
                             <input type="text" v-model = "projectType" placeholder="Type" list="projecttypes"/>
-                                                           
+                            <p class="err" v-if="0"> ! This is required</p>                           
                             </div>
             
                             <!-- Multiline Box -->
@@ -33,17 +33,18 @@
                                 </div>
 
                             <!-- Single Line Box -->
-                            <p class="col-lg-6 text-left">Budget (Rs.)</p>
-                            <p class="col-lg-6 text-left">Deadline </p>
-                            <div class="text-box col-lg-6 mb-32 mt-8 "> 
-                                                                 
-                                    <input type="text" id="project-name" aria-describedby="emailHelp" placeholder="3000">
+                            
+                            
+                            <div class="text-box col-lg-6 mb-32 "> 
+                                        <p class="text-left">Budget (Rs.)</p>                            
+                                    <input type="text" id="project-name" class="mt-8" aria-describedby="emailHelp" placeholder="3000">
                                    <p class="err" v-if="0"> ! This is required</p>
                                 </div>
                             
                                 <!-- Single Line Box -->
-                            <div class="text-box col-lg-6 mb-32 mt-8">                                
-                                    <input type="text" id="project-name" aria-describedby="emailHelp" placeholder="17 December">
+                            <div class="text-box col-lg-6 mb-32 ">   
+                                        <p class="text-left">Deadline </p>                             
+                                    <input type="text" id="project-name" class="mt-8" aria-describedby="emailHelp" placeholder="17 December">
                                    <p class="err" v-if="0"> ! This is required</p>
                                 </div>
 
@@ -51,11 +52,7 @@
                             <p class="col-lg-12 mb-16 text-left">Language</p>
                             <div class="text-box mb-32  col-lg-6 mt-8" >                              
                                     <input type="text" id="project-type" placeholder="Language" list="projecttypes"/>
-                                            <datalist style="background-color: white; color:black;" id="projecttypes">
-                                                <option>Corporate</option>
-                                                <option>Start-Up</option>
-                                                <option>Event</option>
-                                            </datalist>                                     
+                                                                           
                                     </div>
 
 

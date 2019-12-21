@@ -1,11 +1,6 @@
 <div class="login-main side">
-    <div class="social-bar">
-            <i></i><i></i><i></i><i></i>
-            <div class="vertical-line"></div>
-            
-      </div> 
-
-        <div class="row">
+    <socialBar ></socialBar>
+          <div class="row">
             <div class="login-section "> 
 
                 <h2>Log In</h2>
@@ -20,9 +15,9 @@
                  
                       <input type="password"  id="exampleInputPassword1" placeholder="Password">
                     </div>
-                    <p v-if="1" class="mt-16" class="error"> <i class="fa fa-error"></i>! This is error</p>
+                    <p v-if="1" class="mt-16" class="error"> <i class="i-notification"></i> This is error</p>
                   
-                    <button type="submit" class="mt-32">Log In</button>
+                    <button type="submit" class="mt-32">Log In <i class="i-arrow-right2"></i></button>
                     <!-- <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false">
                            login with facebook
                     </div> -->
@@ -30,7 +25,7 @@
                   </form>
                   <div class="absolute apply-as-fl">
                       <P>Searching for work?</P>
-                      <a class="mt-8">APPLY AS FREELANCER</a>
+                      <a class="mt-8">APPLY AS FREELANCER <i class="i-arrow-right2"></i></a>
                   </div>
             </div>
             <div class="cover-section">

@@ -14,30 +14,31 @@ export default Vue.extend({
         href: ''
       }],
       chipValue:'', 
+      value: 'hey'
 
     }
   },
   methods: {
     addLink(){
 
-      var url = ''
+       var linksArr = this.chipValue.split(',')
+
       
-      try{
-          var url = new URL(this.chipValue).hostname
+      linksArr.forEach(element => {
           
-      }
-      catch(err){
-          url = this.chipValue
-        }
-        
+          var url = ''      
+          try{
+            var url = new URL(element).hostname          
+          }
+          catch(err){
+            url = element
+          }        
           this.chips.push({
           name : url,
-          href: this.chipValue
+          href: element
           })
-        
-        
-        this.chipValue=''
-        
+      });            
+        this.chipValue=''        
       }, 
       
     
@@ -55,7 +56,11 @@ export default Vue.extend({
   created: function () {
     
 
+  },
+  handleArray(){
+    this.$emit('handleDescription', this.value)
   }
+
   
   
 });

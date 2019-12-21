@@ -1,0 +1,26 @@
+{
+    "users":[
+        {
+            "id":"1",
+            "Name" :"John",
+            "email":"John@gmail.com",
+            "contact":994549345345,
+            "password" :121323
+        },
+        {
+            "id":"2",
+            "Name" :"John Abhram",
+            "email":"John12323@gmail.com",
+            "contact":9945232145,
+            "password" :121323213232332
+        },
+        {
+            "id":"3",
+            "Name" :"John Yash",
+            "email":"YashJohn@gmail.com",
+            "contact":438753745435,
+            "password" :1213223424323
+        }
+    ],
+
+}

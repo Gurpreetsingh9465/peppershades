@@ -14,9 +14,15 @@ export default Vue.extend({
         href: ''
       }],
       chipValue:'', 
-      value: 'hey'
+      ProjectDescription:[{
+        name:'',
+        industry:'',
+        target:'',
+        description:'' }],
+        employees:[]
 
     }
+  
   },
   methods: {
     addLink(){
@@ -49,9 +55,21 @@ export default Vue.extend({
     },
     redirect(href){
       window.location.href = href
+    },
+    submit: function(){
+      this.$emit("inputdata",this.ProjectDescription);
+    },
+    
+    async getEmployees() {
+      try {
+        const response = await fetch('http://localhost:3000/users/1')
+        const data = await response.json()
+        this.employees = data
+        console.log(this.employees)
+      } catch (error) {
+        console.error(error)
+      }
     }
-    
-    
   },
   created: function () {
     

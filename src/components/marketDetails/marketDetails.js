@@ -13,6 +13,12 @@ export default Vue.extend({
         href: ''
       }],
       chipValue:'', 
+      market:[{
+        age1:'',
+        age2:'',
+        gender: '',
+        audience: ''
+      }]
     }
   },
   props: {
@@ -52,6 +58,9 @@ export default Vue.extend({
     },
     closeForm(){
         this.$emit('cancel')
+    },
+    submitmarket(){
+      this.$emit("marketdetails",this.market);
     }
   },
   created: function () {

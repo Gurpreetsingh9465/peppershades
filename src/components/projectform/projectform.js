@@ -29,6 +29,8 @@ export default Vue.extend({
         timeElapsed: 0,
         basePay: 0
       }],
+      project:[],
+      marketdata:[],
       docH : 0,
       docW: 0
       
@@ -97,8 +99,12 @@ export default Vue.extend({
                   document.documentElement.clientHeight || 
                   document.body.clientHeight; 
     },
-    
-    
+    collectedDesc(variable){
+        this.project= variable
+    },
+    collectedMarket(market){
+        this.marketdata= market
+    }
   },
  
   computed: {

@@ -86,8 +86,9 @@ const projectSchema = mongoose.Schema({
         type: String
     },
     clientId: {
-        type: ObjectId, //////changes has to be made here
+        type: Number, //////changes has to be made here
         required: true
+            // ref: 'User'
     },
     freelancerId: {
         type: mongoose.Schema.Types.ObjectId,

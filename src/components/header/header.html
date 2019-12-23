@@ -1,27 +1,55 @@
-<div class="main-header">
-  <div class="header-right">
-     <div class="profile-pic">
-        <img src="/static/assets/images/pro-pic.jpg" height = "48" width="48" alt="">
-     </div>
+<div class="main-header" :class= "{'enlarge': this.open}">
+  
+      <div v-if = "!this.open" class="header-left">
+         <!-- <img src="/static/assets/images/logo-icon.svg" height="32"> -->
+         <svg height="32" class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.84 32">
+            <g>
+                <polygon points="25.94 32 15.52 0 5.98 0 16.4 32 25.94 32"/>
+                <polygon points="31.84 10.79 28.32 0 18.78 0 22.3 10.79 31.84 10.79"/>
+                <polygon  points="13.18 32 9.54 20.86 0 20.86 3.64 32 13.18 32"/>
+            </g>
+        </svg>
+        <h5>peppershades</h5 >
+      </div>
+      <div class="header-right" :class = "{'open-menu': this.open}">
      <div class="navtop">
+         <div v-if="this.open" class="links center" >
+               <i class="i-cross" @click = "close"></i>
+         </div>
         <div class="links center">
-           <p class="bold" :class = "{'active': active === 'home'}">HOME</p>
+           <p class="bold" :class = "{'active': this.$route.name === 'projectForm'}">HOME</p>
         </div>
         <div class="links center">
-           <p class="bold" :class = "{'active': active === 'process'}">OUR PROCESS</p>
+           <p class="bold" :class = "{'active': this.$route.name === 'process'}">OUR PROCESS</p>
         </div>
         <div class="links center">
-           <p class="bold" :class = "{'active': active === 'portfolio'}">PORTFOLIO</p>
+           <p class="bold" :class = "{'active': this.$route.name === 'portfolio'}">PORTFOLIO</p>
         </div>
         <div class="links center">
-           <p class="bold" :class = "{'active': active === 'blog'}">BLOG</p>
+           <p class="bold" :class = "{'active': this.$route.name === 'blog'}">BLOG</p>
         </div>
         <div class="links center">
-           <p class="bold" :class = "{'active': active === 'help'}">HELP</p>
+           <p class="bold" :class = "{'active': this.$route.name === 'help'}">HELP</p>
         </div>
      </div>
+     <div v-if = "!login" class="login">
+        <div>
+         <i class="i-key"></i><p class="bold">Log In</p>
+      </div>
+      </div>
+     <div v-else class="profile-pic">
+         
+      
+         <h6 v-if = "this.open">My Name</h6>
+         <img src="/static/assets/images/pro-pic.jpg" height = "48" width="48" alt="">
+      
+      </div>
      
   </div>
+  <div class="menu">
+      <img src="/static/assets/images/list-menu.svg" height="24" @click = "openit" >
+  </div>
+  
   
   
 </div>

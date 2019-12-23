@@ -1,0 +1,16 @@
+{
+            "name" : "Event Publicity",
+            "color": " #d3232a",
+            "includedIn" : {
+                "green": false,
+                "yellow": true,
+                "red": true
+            },
+            "Price":1099,
+            "minimumHrs": {
+                "green": 7,
+                "yellow": 12,
+                "red": 12
+            },
+            "deliverables": ["Logo", "ID Cards", "T-Shirt", "Visiting Card", "Flex Board"]
+        },

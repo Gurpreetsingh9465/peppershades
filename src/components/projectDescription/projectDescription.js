@@ -11,7 +11,8 @@ export default Vue.extend({
     return {
       chips:[{
         name: '',
-        href: ''
+        href: '',
+        isURL: false
       }],
       chipValue:'', 
       ProjectDescription:[{
@@ -24,9 +25,12 @@ export default Vue.extend({
     }
   
   },
+  computed: {
+    
+  },
   methods: {
     addLink(){
-
+       var flag = false
        var linksArr = this.chipValue.split(',')
 
       
@@ -34,14 +38,19 @@ export default Vue.extend({
           
           var url = ''      
           try{
-            var url = new URL(element).hostname          
+            var url = new URL(element).hostname   
+            flag = true
+            url = url.split('.')
+            if(url.length <= 2) url = url[0]       
+            else url = url[1]
           }
           catch(err){
             url = element
           }        
           this.chips.push({
           name : url,
-          href: element
+          href: element,
+          isURL: flag
           })
       });            
         this.chipValue=''        

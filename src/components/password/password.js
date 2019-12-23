@@ -4,11 +4,13 @@ import Vue from 'vue';
 import template from './password.html'
 import styles from './password.less'
 import socialBar from '../UI/socialBar.vue'
+import cover from '../UI/cover.vue'
 
 export default Vue.extend({
     template: template,
     components: {
-        socialBar
+        socialBar,
+        cover
     },
     data: function() {
         return {
@@ -16,7 +18,7 @@ export default Vue.extend({
         }
     },
     methods: {
-
+        
     },
     created: function() {}
 });

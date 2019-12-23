@@ -12,10 +12,18 @@ export default Vue.extend({
   template: template,
   data: function () {
     return {
-      logo: 'logo'
+      logo: 'logo',
+      open: false
     }
   },
-  methods: {},
+  methods: {
+    openit(){
+      this.open = true
+    },
+    close(){
+      this.open = false
+    }
+  },
   created: function () {
   }
 });

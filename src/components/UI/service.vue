@@ -1,6 +1,6 @@
 <template>
     <div class="service" :class="{'service-active': active}" @click="active = !active" >
-    <i class="fa fa-facebook"></i>
+     <img :src = "'/static/assets/images/services/' + name + '.svg'" >
     <h5>{{name}}</h5>
     <p>From {{price}}/-</p>
     </div>
@@ -28,7 +28,7 @@ export default {
 <style lang="less">
     .service{
     width: 216px;
-    height: 160px;
+    height: fit-content;
     padding: 24px;   
     border-radius: 12px; 
     // border: solid 1px black;
@@ -45,8 +45,9 @@ export default {
     color: white;
     border: none;
 }
-.service i{
-    width: 48px;
-    height: 48px;
+.service img{
+    margin-bottom: 20px;
+    width: 96px;
+    height: 96px;
 }
 </style>

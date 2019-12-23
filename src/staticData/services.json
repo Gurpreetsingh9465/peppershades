@@ -2,7 +2,7 @@
     "packages":[
         {
             "name" : "Youtube Branding",
-            "color": "Red",
+            "color": "#F35252",
             "includedIn" : {
                 "green": true,
                 "yellow": true,
@@ -18,7 +18,7 @@
         },
         {
             "name" : "Social Media Advertisement",
-            "color": "Blue",
+            "color": "#198CE4",
             "includedIn" : {
                 "green": false,
                 "yellow": true,
@@ -33,8 +33,136 @@
             "deliverables": ["Banner", "Posters"]
         },
         {
-            "name" : "Starting a new business",
-            "color": "Blue",
+            "name" : "Starting A New Business",
+            "color": "#232f34",
+            "includedIn" : {
+                "green": false,
+                "yellow": true,
+                "red": true
+            },
+            "Price":1099,
+            "minimumHrs": {
+                "green": 7,
+                "yellow": 12,
+                "red": 12
+            },
+            "deliverables": ["Logo", "ID Cards", "T-Shirt", "Visiting Card", "Flex Board"]
+        },
+        {
+            "name" : "A New Brand Identity",
+            "color": "#4d0e3a",
+            "includedIn" : {
+                "green": false,
+                "yellow": true,
+                "red": true
+            },
+            "Price":1099,
+            "minimumHrs": {
+                "green": 7,
+                "yellow": 12,
+                "red": 12
+            },
+            "deliverables": ["Logo", "ID Cards", "T-Shirt", "Visiting Card", "Flex Board"]
+        },
+        {
+            "name" : "Logo & Visiting Card",
+            "color": "#ed1a68",
+            "includedIn" : {
+                "green": false,
+                "yellow": true,
+                "red": true
+            },
+            "Price":1099,
+            "minimumHrs": {
+                "green": 7,
+                "yellow": 12,
+                "red": 12
+            },
+            "deliverables": ["Logo", "ID Cards", "T-Shirt", "Visiting Card", "Flex Board"]
+        },        
+        {
+            "name" : "Online Advertisement",
+            "color": " #f26122",
+            "includedIn" : {
+                "green": false,
+                "yellow": true,
+                "red": true
+            },
+            "Price":1099,
+            "minimumHrs": {
+                "green": 7,
+                "yellow": 12,
+                "red": 12
+            },
+            "deliverables": ["Logo", "ID Cards", "T-Shirt", "Visiting Card", "Flex Board"]
+        },
+        {
+            "name" : "Book Covers Pack",
+            "color": "#65bd55",
+            "includedIn" : {
+                "green": false,
+                "yellow": true,
+                "red": true
+            },
+            "Price":1099,
+            "minimumHrs": {
+                "green": 7,
+                "yellow": 12,
+                "red": 12
+            },
+            "deliverables": ["Logo", "ID Cards", "T-Shirt", "Visiting Card", "Flex Board"]
+        },
+        {
+            "name" : "Resume Design",
+            "color": "#534a9e",
+            "includedIn" : {
+                "green": false,
+                "yellow": true,
+                "red": true
+            },
+            "Price":1099,
+            "minimumHrs": {
+                "green": 7,
+                "yellow": 12,
+                "red": 12
+            },
+            "deliverables": ["Logo", "ID Cards", "T-Shirt", "Visiting Card", "Flex Board"]
+        },
+        {
+            "name" : "Company Portfolio",
+            "color": "#61cbeb",
+            "includedIn" : {
+                "green": false,
+                "yellow": true,
+                "red": true
+            },
+            "Price":1099,
+            "minimumHrs": {
+                "green": 7,
+                "yellow": 12,
+                "red": 12
+            },
+            "deliverables": ["Logo", "ID Cards", "T-Shirt", "Visiting Card", "Flex Board"]
+        },
+        {
+            "name" : "Movie Publicity",
+            "color": "#bc61a6",
+            "includedIn" : {
+                "green": false,
+                "yellow": true,
+                "red": true
+            },
+            "Price":1099,
+            "minimumHrs": {
+                "green": 7,
+                "yellow": 12,
+                "red": 12
+            },
+            "deliverables": ["Logo", "ID Cards", "T-Shirt", "Visiting Card", "Flex Board"]
+        },
+        {
+            "name" : "Seminar & Conferences",
+            "color": "#e5bd2b ",
             "includedIn" : {
                 "green": false,
                 "yellow": true,
@@ -48,10 +176,10 @@
             },
             "deliverables": ["Logo", "ID Cards", "T-Shirt", "Visiting Card", "Flex Board"]
         }
+        
     ],
     "services":[
         {
-            "id" : 1,
             "name": "Logo",
             "category" : "Brand Identity",
             "price" : 399,
@@ -62,7 +190,6 @@
             }
         },
         {
-            "id" : 2,
             "name": "Posters",
             "category" : "Advertisement",
             "price" : 399,
@@ -71,6 +198,157 @@
                 "yellow" : 3,
                 "red" : 6
             }
+        },
+        {
+            "name": "ID Cards",
+            "category" : "Brand Identity",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Business Cards",
+            "category" : "Brand Identity",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Pamphlet",
+            "category" : "Brand Identity",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Letterhead",
+            "category" : "Brand Identity",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Stationary",
+            "category" : "Brand Identity",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Stickers",
+            "category" : "Brand Identity",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Brochure",
+            "category" : "Brand Identity",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Certificates",
+            "category" : "Brand Identity",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Billboard",
+            "category" : "Advertisement",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Backdrop",
+            "category" : "Advertisement",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Flexes",
+            "category" : "Advertisement",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Banners",
+            "category" : "Advertisement",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Standees",
+            "category" : "Advertisement",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Sunboards",
+            "category" : "Advertisement",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
+        },
+        {
+            "name": "Other Designs",
+            "category" : "Others",
+            "price" : 399,
+            "minimumHrs" : {
+                "green" : 3,
+                "yellow" : 3,
+                "red" : 6
+            }
         }
+        
     ]
 }

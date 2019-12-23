@@ -1,5 +1,5 @@
 <div class="projectForm" >
-                <socialBar ></socialBar>   
+                <socialBar class="sideBar" ></socialBar>   
     <div class="row no-wrap">
         <div class="side-container side">
                 <div class="fixed" :class = "{'slide-up': currentTab === 2}">
@@ -33,7 +33,7 @@
         </div>               
         </div>
 
-        <div class="project-form " :style = "{'width': this.docW - 600 + 'px'}">
+        <div class="project-form" :style = "{'width': this.docW - 600 + 'px'}">
                 <div v-if="currentTab == 1" class="tab-content"> 
                                                   
                         <div class="package-container mb-16">                                              
@@ -41,11 +41,11 @@
                                                 <div class="row">
                                                         <div class="pack-split-1">
                                                         <h4 class="bold">{{pack.name}}</h4>
-                                                        <p class="mt-8">Starting from {{pack.price}}/-</p>
+                                                        <p class="mt-8">Starting from {{pack.Price}}/-</p>
                                                         <img class="forward" src="../../../static/assets/images/icons/forward.svg" height="35" width="48">
                                                         </div>
                                                         <div class="pack-split-2">
-                                                        <img src=""/> 
+                                                                <img :src="'/static/assets/images/packages/' + pack.name + '.svg'" /> 
                                                         </div>
                                                 </div>                       
                                                           
@@ -64,7 +64,7 @@
                                 <div class="service-pill"><p>Web & Android</p></div>
                         </div>
 
-                        <div class="service-category">
+                        <div class="service-category mb-64">
                                 <div @click = "select(item.name, item.price)" v-for="(item, index) in services">
                                         <service :name = "item.name" :price="item.price" :active = "false" :index="index" :key = "item.name" ></service> 
                                 </div>
@@ -99,7 +99,8 @@
                       
                 </div>
                 <div class="controller mt-32" :style="{'width': docW - 96 + 'px'}">  
-                                <p class="float-left">*Terms & Condition Apply</p>                     
+
+                                <p class="float-left">*Terms & Condition Apply</p>  
                                 <button v-if="currentTab === 2 && !showForm " @click = "" class="float-right" >Initialize <i class="i-arrow-right2"></i></button>        
                                 <button v-else-if = "currentTab === 1"  @click = "nextTab" class="float-right" >Project Description <i class="i-arrow-right2"></i></button>
                                 

@@ -2,20 +2,70 @@
 @import "../../assets/fonts.less";
 @import "../../../static/assets/icons/style.less";
 
-
-.header-top{
-  height: 96px;
-  width: 100%;
-  font-family: Bold;
+.main-header{
   display: inline-block;
+  width: 100%;
+  height: 96px;
+  transition: .2s;
+}
+.enlarge{
+  height: 100vh;
+  z-index: 1000;
+}
+.header-left{
+  float: left;
+  height: 100%;  
+  padding: 32px;
+  display: flex;
+}
+.header-left:hover{
+  cursor: pointer;
+}
+.header-left h5{
+  padding: 0px 12px;
 }
 
+.active{
+  color: @theme-color;
+}
+.header-right{
+  display: flex;
+  height: 100%;
+  float: right; 
+  }
+  .login{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    transition: .3s;
+  }
+  .login:hover{
+    cursor: pointer;
+    color: @theme-color;
+
+  }
+  .login:hover div{
+    border: 2px solid @theme-color;
+  }
+  .login div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+    height: 48px;
+    border-radius: 12px;
+    border: 2px black solid;
+  }
+  .login p{
+    padding: 0px 0px 0px 8px;
+  }
  
  .profile-pic{
   width: 96px;
   height: 96px;
-  right: 0;
-  position: fixed;
+  display: flex;
   padding: 24px;
  }
  .profile-pic img{
@@ -24,13 +74,14 @@
  }
  
  .navtop{
-   height: 100%;
- 
-  
+   height: 100%;  
   display: flex;
   flex-direction: row;
  
  }
+ 
+ 
+ 
 
 
  .links{
@@ -42,9 +93,71 @@
  .links{
   cursor: pointer;
  }
- .links:hover p{
+ .links:hover{
    
     color: @theme-color;
  }
+
+
+ 
+
+.menu{
+  display: none !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  height: 96px;
+  width: 96px;
+}
+.menu:hover{
+  cursor: pointer;
+}
+.open-menu{
+  display: flex !important;
+  float: none !important;
+  padding: 32px !important;
+  flex-direction: column !important;
+  justify-content: right;
+  align-items: flex-end;
+  
+}
+.open-menu .profile-pic{
+  border-radius: 48px;
+  display: flex !important;
+  width: fit-content; 
+}
+.open-menu .i-cross{
+  font-size: 32px;
+}
+.open-menu .profile-pic h6{
+  display: block;
+  padding: 16px;
+}
+.open-menu .navtop{
+  flex-direction: column !important;
+  text-align: right;
+}
+.open-menu .links p{
+   font-size: 48px !important ;
+   font-family: Bold !important;
+}
+.open-menu .profile-pic:hover{
+  cursor: pointer;
+  background: #f5f5f5;
+}
+
+@media only screen and (max-width: 1280px){
+
+  .header-right{
+    display: none;
+  }
+  .menu{
+    display: flex !important;
+  }
+
+}
+
+
  
 

@@ -38,6 +38,7 @@ router.post('/register', async (req, res) => {
         contact: req.body.contact,
         password: hashPassword
     })    
+
     if(!error && !emailExist){
         await newUser.save().then(result => {
             console.log(result)
@@ -57,7 +58,7 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res, next) => {   
     
     passport.authenticate('local', {
-        session: false
+        session: true
         }, (err, user, info) => {
             if(err) return next(err)
             if (!user) { 

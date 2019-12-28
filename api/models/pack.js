@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 
 const packsSchema = mongoose.Schema({
     //id required or not
+    _id: mongoose.Schema.Types.ObjectId,
     packageName: {
         type: String,
         required: true

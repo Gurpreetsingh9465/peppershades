@@ -51,11 +51,11 @@ const projectSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    services: [
+    services: [ ////required
         { serviceName: String },
         { currentStatus: String },
         { finalDesign: String },
-        { designImages: Array }, ///////////
+        { designImages: Array },
         { timeElapsed: Number },
         { basePay: Number },
     ],
@@ -70,7 +70,7 @@ const projectSchema = mongoose.Schema({
         type: String
     },
     discounts: {
-        type: Array //////changes has to be made here
+        type: Array
     },
     deadline: {
         type: String
@@ -86,9 +86,9 @@ const projectSchema = mongoose.Schema({
         type: String
     },
     clientId: {
-        type: Number, //////changes has to be made here
-        required: true
-            // ref: 'User'
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'User'
     },
     freelancerId: {
         type: mongoose.Schema.Types.ObjectId,
@@ -113,7 +113,18 @@ const projectSchema = mongoose.Schema({
     },
     review: {
         type: String
-    }
+    },
+    required: [
+        "name",
+        "industry",
+        "description",
+        "target",
+        "serviceCategory",
+        "services",
+        "serviceMode",
+        "paymentAmount",
+        "clientId"
+    ]
 })
 
 

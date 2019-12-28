@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 const reportissueSchema = mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     reportId: { //////reportId shoulld be ObjectId
         type: Number,
         required: true

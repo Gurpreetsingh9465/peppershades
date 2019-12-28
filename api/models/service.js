@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
 
 const serviceSchema = mongoose.Schema({
-    serviceId: { ///////////////
+    _id: mongoose.Schema.Types.ObjectId,
+    serviceId: {
         type: Number,
         required: true
     },

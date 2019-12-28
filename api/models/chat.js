@@ -4,13 +4,15 @@ const chatSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     members: [{
             m_client: {
-                type: ObjectId,
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'User',
                 required: true
             }
         },
         {
             m_freelancer: {
-                type: ObjectId,
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'User',
                 required: true
             }
         }

@@ -19,7 +19,7 @@ export default Vue.extend({
 //   let box = document.querySelector('.chat-body');
 //   box.scrollTop = box.scrollHeight;
 //   },
-//     saveMessage() {
+//     saveMessage() {htdtdtyhfhuf
 //         //save to firestore
 //         db.collection('chat').add({
 //             message: this.message,

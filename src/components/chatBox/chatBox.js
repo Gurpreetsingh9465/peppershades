@@ -1,7 +1,7 @@
 /* eslint-disable */
 import Vue from 'Vue'
-import template from './chatBox.html'
-import styles from './chatBox.less'
+import template from './chatbox.html'
+import styles from './chatbox.less'
 
 
 

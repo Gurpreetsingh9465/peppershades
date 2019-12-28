@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import template from './projectView.html'
-import styles from './projectView.less'
+import template from './projectview.html'
+import styles from './projectview.less'
 
 /* eslint-disable */
 import fullscreen from 'vue-fullscreen'

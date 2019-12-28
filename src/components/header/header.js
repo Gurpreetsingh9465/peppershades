@@ -3,7 +3,7 @@
 import Vue from 'vue';
 import template from './header.html'
 import styles from './header.less'
-import projectForm from '../projectForm/projectForm'
+import projectorm from '../projectform/projectform'
 
 export default Vue.extend({
   components: {

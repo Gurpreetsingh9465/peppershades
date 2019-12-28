@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import template from './projectDescription.html'
-import styles from './projectDescription.less'
+import template from './projectdescription.html'
+import styles from './projectdescription.less'
 
 /* eslint-disable */
 

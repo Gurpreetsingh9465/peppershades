@@ -2,12 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import header from '../components/header/header'
 import root from '../components/root/root'
-import projectForm from '../components/projectForm/projectForm'
+import projectForm from '../components/projectform/projectform'
 import homepage from '../components/homepage/homepage'
-import chatBox from '../components/chatBox/chatBox'
+import chatBox from '../components/chatbox/chatbox'
 import login from '../components/login/login'
 import dashboard from '../components/dashboard/dashboard'
-import projectView from '../components/projectView/projectView'
+import projectView from '../components/projectview/projectview'
 import signup from '../components/signup/signup'
 import password from '../components/password/password'
 
@@ -19,7 +19,7 @@ export default new Router({
   routes: [
         {
           path: '/projectform',
-          name: 'projectForm',
+          name: 'projectform',
           component: projectForm
         },
         {
@@ -39,7 +39,7 @@ export default new Router({
         },
         {
           path: '/projectview',
-          name:'projectView',
+          name:'projectview',
           component:projectView
         },
         {

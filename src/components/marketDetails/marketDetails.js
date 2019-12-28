@@ -1,8 +1,8 @@
 /* eslint-disable */
 
 import Vue from 'vue';
-import template from './marketDetails.html'
-import styles from './marketDetails.less'
+import template from './marketdetails.html'
+import styles from './marketdetails.less'
 
 export default Vue.extend({
   template: template,

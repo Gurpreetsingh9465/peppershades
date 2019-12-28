@@ -1,8 +1,9 @@
 /* eslint-disable */
 
-import Vue from 'vue';
+import Vue from 'vue'
 import template from './dashboard.html'
 import styles from './dashboard.less'
+import axios from 'axios'
 
 export default Vue.extend({
   template: template,
@@ -11,12 +12,18 @@ export default Vue.extend({
       value: 45,
       max: 100,
       widthvalue:'40%',
-      activeColor:'red'
+      activeColor:'red',
+      user: '',
+      log: true
     }
   },
   methods: {
-    randomValue() {
-      this.value = Math.random() * this.max
-    }
+        getUser(){
+            const response = axios.get('http://localhost:3000/user/currentuser')
+            alert(response)
+        }
+    },
+  created(){
+    this.getUser()
   }
 });

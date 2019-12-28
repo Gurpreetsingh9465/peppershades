@@ -9,19 +9,26 @@
                 <h2>Sign Up</h2>
                 </div>
                 <div class="col-lg-12">
+                
                 <div class="mt-32"><p class="body1"> Already registered? <a>LOG IN</a></p> </div>
               </div>
-                <form class="mt-64">
+              <ValidationObserver v-slot="{ handleSubmit }">
+                <form class="mt-64" @submit.prevent="handleSubmit(onSubmit)">
                     <div class="row">
                     <div class="form-group col-lg-6">
                    
-                      <input type="text" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name">
-                     
-                      
+                      <ValidationProvider name="First Name" rules="required|alpha" v-slot="{ errors}">
+                        <input v-model="firstName" type="text" placeholder="First Name">
+                      <span class="showerror error">  <i v-if="errors[0]" class="i-notification"></i>   {{ errors[0] }}</span>
+                      </ValidationProvider>
+                    
                     </div>
                     <div class="form-group col-lg-6">
                  
-                        <input type="text" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name">
+                        <ValidationProvider name="Last Name" rules="required|alpha" v-slot="{ errors }">
+                          <input v-model="lastName" type="text" placeholder="Last Name">
+                          <span class="showerror error">  <i v-if="errors[0]" class="i-notification"></i>   {{ errors[0] }}</span>
+                        </ValidationProvider>
                     </div>
                     
                     
@@ -36,8 +43,11 @@
                     </div>
                     <div class="form-group col-lg-12">
                    
-                        <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        
+                      <ValidationProvider name="E-mail" rules="required|email" v-slot="{ errors }">
+                        <input v-model="email" type="email" placeholder="Enter email">
+                        <span class="showerror error">  <i v-if="errors[0]" class="i-notification"></i>   {{ errors[0] }}</span>
+
+                      </ValidationProvider>                        
                       </div>
                       <div class="form-group col-lg-12">
                    
@@ -49,18 +59,22 @@
                         </div>
                     
                     <div class="col-lg-12">
-                    <p v-if="1" class="mt-16" class="error"> <i class="i-notification"></i> This is error</p>
+                    <p v-if="1" class="mt-16" class="error"> <i class="i-notification"></i>  This is error/p>
                   </div>
                    <div class="col-lg-12">
                     <button type="submit" class="mt-32">Sign Up</button>
                     <!-- <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false">
                            login with facebook
                     </div> -->
+       
+
                   </div>
                 </div>
                   </form>
                   
-                  <div class="col mt-64 ">
+                  
+                </ValidationObserver>
+                  <div class="absolute apply-as-fl">
                       <div class="row">
                         <div class="col-lg-12">
                           <P>Searching for work?</P>

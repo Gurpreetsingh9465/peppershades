@@ -5,8 +5,11 @@ const router = express.Router()
 const User = require('../models/user')
 const passport = require('passport')
 const cookies = require('cookies')
+const jwt = require('jsonwebtoken');
+const { key } = require('../../keys');
 
 const {registerValidation, loginValidation} = require('../../config/validate')
+
 
 //Creating a new user
 router.post('/register', async (req, res) => {
@@ -65,9 +68,10 @@ router.post('/login', async (req, res, next) => {
                 return res.send("LogIn Failed") 
             }
             req.logIn(user, function(err) {
-            if (err) { return next(err) }  
+            if (err) { return next(err) }
             req.session.user = "hey"
-            console.log(req.session)
+            var token = jwt.sign(user._id, key);
+            res.cookie('token', token, { maxAge: 900000, httpOnly: true })
             res.send("Log In Success")              
             
         })

@@ -7,7 +7,7 @@ import homepage from '../components/homepage/homepage'
 import chatBox from '../components/chatbox/chatbox'
 import login from '../components/login/login'
 import dashboard from '../components/dashboard/dashboard'
-import projectView from '../components/projectview/projectview'
+import projectView from '../components/projectview/projectview';
 import signup from '../components/signup/signup'
 import password from '../components/password/password'
 

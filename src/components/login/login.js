@@ -38,11 +38,15 @@ export default Vue.extend({
        
     },
     async login(){    
-            this.result = Axios.post('http://127.0.0.1:3000/user/login', {
+            Axios.post('/user/login', {
             email: this.email,
             password: this.password          
+        }).then((result)=>{
+            this.result= result;
+            console.log(result.data);
+        }).catch((err)=>{
+            console.log(err,'5000');
         });      
-        
     }
     },
     created: function() {

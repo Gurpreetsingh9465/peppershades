@@ -40,7 +40,14 @@ module.exports = {
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
 
-    cssSourceMap: true
+    cssSourceMap: true,
+
+    proxyTable: {
+      '/user/*': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+      }
+    }
   },
 
   build: {

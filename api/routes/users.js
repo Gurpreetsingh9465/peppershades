@@ -62,18 +62,18 @@ router.post('/login', async (req, res, next) => {
     
     passport.authenticate('local', {
         session: true
-        }, (err, user, info) => {
+        }, (err, user) => {
             if(err) return next(err)
             if (!user) { 
                 return res.send("LogIn Failed") 
             }
             req.logIn(user, function(err) {
+            console.log(err);
             if (err) { return next(err) }
             req.session.user = "hey"
-            var token = jwt.sign(user._id, key);
+            var token = jwt.sign({token: user._id}, key);
             res.cookie('token', token, { maxAge: 900000, httpOnly: true })
-            res.send("Log In Success")              
-            
+            res.json({message: 'login successfully'}).status(200);
         })
     })(req, res, next)  
 
